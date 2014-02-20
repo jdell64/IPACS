@@ -1,0 +1,51 @@
+WINDOWS SERVER:
+{
+        "_id" : ObjectId("530650c7d33e2ab8ba040b27"),
+        "name" : "test-server1",
+        "device_type" : "server",
+        "os" : "linux",
+        "net_info" : {
+                "ip" : "192.168.0.5",
+                "name" : "eth0"
+        },
+        "os_info" : {
+                "name" : "RHEL 5.2"
+        },
+        "drive_info" : {
+
+        }
+}
+
+
+LINUX SERVER:
+{
+        "_id" : ObjectId("53065133d33e2ab8ba040b28"),
+        "name" : "test-server",
+        "device_type" : "server",
+        "os" : "windows",
+        "net_info" : {
+                "ip" : "192.168.0.15",
+                "name" : "eth0"
+        },
+        "os_info" : {
+                "name" : "windows8.1"
+        },
+        "drive_info" : {
+
+        }
+}
+
+NET_DEVICE:
+{
+        "_id" : ObjectId("5306521ad33e2ab8ba040b29"),
+        "name" : "test-router-1a",
+        "device_type" : "net",
+        "os" : "CISCO",
+        "net_info" : {
+                "ip" : "192.168.0.1",
+                "name" : "eth0"
+        },
+        "other" : {
+
+        }
+}

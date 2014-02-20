@@ -1,0 +1,57 @@
+{
+        "_id" : ObjectId("5306542cd33e2ab8ba040b2a"),
+        "name" : "test-router-1a",
+        "device_type" : "net",
+        "os" : "CISCO",
+        "info" : [
+                {
+                        "net_info" : {
+                                "ip" : "192.168.0.1",
+                                "name" : "eth0"
+                        },
+                        "other" : {
+
+                        }
+                }
+        ]
+}
+{
+        "_id" : ObjectId("5306545cd33e2ab8ba040b2b"),
+        "name" : "test-server",
+        "device_type" : "server",
+        "os" : "windows",
+        "info" : [
+                {
+                        "net_info" : {
+                                "ip" : "192.168.0.15",
+                                "name" : "eth0"
+                        },
+                        "os_info" : {
+                                "name" : "windows8.1"
+                        },
+                        "drive_info" : {
+
+                        }
+                }
+        ]
+}
+{
+        "_id" : ObjectId("5306547dd33e2ab8ba040b2c"),
+        "name" : "test-server1",
+        "device_type" : "server",
+        "os" : "linux",
+        "info" : [
+                {
+                        "net_info" : {
+                                "ip" : "192.168.0.5",
+                                "name" : "eth0"
+                        },
+                        "os_info" : {
+                                "name" : "RHEL 5.2"
+                        },
+                        "drive_info" : {
+
+                        }
+                }
+        ]
+}
