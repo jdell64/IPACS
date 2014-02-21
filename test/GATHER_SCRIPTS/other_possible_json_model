@@ -1,6 +1,5 @@
 {
-        "_id" : ObjectId("5306542cd33e2ab8ba040b2a"),
-        "name" : "test-router-1a",
+       "name" : "test-router-1a",
         "device_type" : "net",
         "os" : "CISCO",
         "info" : [
@@ -16,7 +15,6 @@
         ]
 }
 {
-        "_id" : ObjectId("5306545cd33e2ab8ba040b2b"),
         "name" : "test-server",
         "device_type" : "server",
         "os" : "windows",
@@ -36,7 +34,6 @@
         ]
 }
 {
-        "_id" : ObjectId("5306547dd33e2ab8ba040b2c"),
         "name" : "test-server1",
         "device_type" : "server",
         "os" : "linux",

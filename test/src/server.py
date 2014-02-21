@@ -5,6 +5,7 @@ from bson import ObjectId
 import gridfs
 import pymongo
 import sys
+import lib.crud_ops
 
 __author__ = 'Jeff Tindell'
 
@@ -39,11 +40,9 @@ __author__ = 'Jeff Tindell'
 
 #establish a connection to the db:
 connection = pymongo.MongoClient("mongodb://localhost")
-db = connection.pacman
+db = connection.ipac
 # get collections of my network devices and servers in the inventory
-net_devices_col = db.net_devices
-servers_col = db.servers
-errors = []
+collection = db.test
 #get gridfs for the two dbs
 fs = gridfs.GridFS(db)
 
@@ -77,19 +76,23 @@ def fonts(filename):
 
 @bottle.route('/')
 def home_page():
-    #copy any errors out of the errors dict, and then empty the dict
-    err_list = copy.deepcopy(errors)
-    errors[:] = []
-
-    #run a search for all servers and net_devices
-    net_devices = net_devices_col.find()
-    servers = servers_col.find()
+    results = lib.crud_ops.find_all(collection)
+    print results
+    print type(results)
+    return bottle.template('all_devices.tpl', {'results':results})
 
 
 
     #send the results to the home page:
-    template_args = {'network_devices': net_devices, 'servers': servers, 'errors': err_list}
-    return bottle.template('home.tpl', template_args)
+    # template_args = {'network_devices': net_devices, 'servers': servers, 'errors': err_list}
+    # return bottle.template('home.tpl', template_args)
+
+# trying out different html code:
+@bottle.route('/test')
+def test_page():
+    return bottle.template('tryHTML/test.tpl')
+
+
 
 @bottle.route('/showDevice')
 def show_device():

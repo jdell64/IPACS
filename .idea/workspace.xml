@@ -2,29 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="454e0096-018a-4d3a-8d34-15a5fe706eb6" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/src/static/img/delete.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/src/static/img/edit.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/lib/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/src/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/src/lib/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/src/views/file_control/add_file_to_existing.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/src/views/users/blog_template.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/src/views/device_view.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/src/views/file_control/edit_existing_filename.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/src/views/users/error_template.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/src/views/home.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/src/views/users/login.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/src/lib/math.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/GATHER_SCRIPTS/new_json_model" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/GATHER_SCRIPTS/other_possible_json_model" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/src/server.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/src/views/users/signup.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/src/static/css/style.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/src/unit_test.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/src/views/users/welcome.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/src/lib/crud_ops.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/src/static/js/custom.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/src/lib/debug_functions.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/src/views/home_old.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/src/views/tryHTML/test.tpl" />
+      <change type="DELETED" beforePath="C:\Users\Jeff Tindell\Documents\GitHub\IPACS\test\src\views\home.tpl" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/IPACS.iml" afterPath="$PROJECT_DIR$/.idea/IPACS.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/GATHER_SCRIPTS/other_possible_json_model" afterPath="$PROJECT_DIR$/test/GATHER_SCRIPTS/other_possible_json_model" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/src/server.py" afterPath="$PROJECT_DIR$/test/src/server.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/src/static/css/style.css" afterPath="$PROJECT_DIR$/test/src/static/css/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/src/unit_test.py" afterPath="$PROJECT_DIR$/test/src/unit_test.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="IPACS.iws" />
@@ -88,46 +76,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="__init__.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/src/lib/__init__.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="102">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="new_json_model" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/GATHER_SCRIPTS/new_json_model">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="11" selection-start="764" selection-end="764" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="952">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="windows_fingerprint.ps1" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/GATHER_SCRIPTS/windows/windows_fingerprint.ps1">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="217" column="20" selection-start="7867" selection-end="7879" vertical-scroll-proportion="0.0" vertical-offset="3411" max-vertical-offset="5899">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="style.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/src/static/css/style.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2278">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="server.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/src/server.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="56" column="57" selection-start="1564" selection-end="1564" vertical-scroll-proportion="0.0" vertical-offset="685" max-vertical-offset="4267">
+            <state line="92" column="44" selection-start="2453" selection-end="2453" vertical-scroll-proportion="0.0" vertical-offset="1521" max-vertical-offset="4318">
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -135,46 +87,30 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="unit_test.py" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/test/src/unit_test.py">
+      <file leaf-file-name="all_devices.tpl" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/src/views/all_devices.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="30" selection-start="76" selection-end="76" vertical-scroll-proportion="0.16306955" vertical-offset="0" max-vertical-offset="417">
+            <state line="17" column="14" selection-start="328" selection-end="328" vertical-scroll-proportion="-7.1923075" vertical-offset="0" max-vertical-offset="2652">
+              <folding>
+                <element signature="tag#head#0;tag#html#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="style.css" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test/src/static/css/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="54" column="0" selection-start="835" selection-end="835" vertical-scroll-proportion="0.5298013" vertical-offset="598" max-vertical-offset="2346">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="__init__.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/__init__.py">
+      <file leaf-file-name="custom.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/src/static/js/custom.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="102">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="__init__.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/lib/__init__.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="102">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="math.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/src/lib/math.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="17" selection-start="714" selection-end="727" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="493">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="other_possible_json_model" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/GATHER_SCRIPTS/other_possible_json_model">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="17" selection-start="1002" selection-end="1002" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1054">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="119">
               <folding />
             </state>
           </provider>
@@ -202,18 +138,26 @@
         <option value="$PROJECT_DIR$/GATHER_SCRIPTS/windows/windows_fingerprint.ps1" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/test/GATHER_SCRIPTS/new_json_model" />
-        <option value="$PROJECT_DIR$/test/GATHER_SCRIPTS/other_possible_json_model" />
         <option value="$PROJECT_DIR$/test/src/functions/test_functions.py" />
         <option value="$PROJECT_DIR$/test/lib/__init__.py" />
         <option value="$PROJECT_DIR$/src/server.py" />
-        <option value="$PROJECT_DIR$/test/src/server.py" />
+        <option value="$PROJECT_DIR$/test/src/lib/debug_functions.py" />
         <option value="$PROJECT_DIR$/test/src/unit_test.py" />
+        <option value="$PROJECT_DIR$/test/src/lib/crud_ops.py" />
+        <option value="$PROJECT_DIR$/test/src/views/home_old.tpl" />
+        <option value="$PROJECT_DIR$/test/src/views/home.tpl" />
+        <option value="$PROJECT_DIR$/test/GATHER_SCRIPTS/other_possible_json_model" />
+        <option value="$PROJECT_DIR$/test/src/static/js/test.html" />
+        <option value="$PROJECT_DIR$/test/src/server.py" />
+        <option value="$PROJECT_DIR$/test/src/views/tryHTML/test.tpl" />
+        <option value="$PROJECT_DIR$/test/src/static/js/custom.js" />
+        <option value="$PROJECT_DIR$/test/src/views/all_devices.tpl" />
+        <option value="$PROJECT_DIR$/test/src/static/css/style.css" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="728" />
-    <option name="y" value="150" />
+    <option name="x" value="800" />
     <option name="width" value="800" />
     <option name="height" value="870" />
   </component>
@@ -245,7 +189,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -300,7 +243,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
+              <option name="myItemId" value="views" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -317,6 +260,18 @@
               <option name="myItemId" value="test" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -328,7 +283,33 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="IPACS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="IPACS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GATHER_SCRIPTS" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -366,6 +347,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -379,22 +361,24 @@
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="recentsLimit" value="5" />
     <property name="restartRequiresConfirmation" value="true" />
+    <property name="LayoutCode.rearrangeEntriesHTML" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Jeff Tindell\Documents\GitHub\IPACS\test\src\static" />
       <recent name="C:\Users\Jeff Tindell\Documents\GitHub\IPACS\src\lib" />
       <recent name="C:\Users\Jeff Tindell\Documents\GitHub\IPACS\src" />
       <recent name="C:\Users\Jeff Tindell\Documents\GitHub\IPACS\test\src" />
       <recent name="C:\Users\Jeff Tindell\Documents\GitHub\IPACS\GATHER_SCRIPTS\windows" />
-      <recent name="C:\Users\Jeff Tindell\Documents\GitHub\IPACS\GATHER_SCRIPTS" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Jeff Tindell\Documents\GitHub\IPACS\test\src\views\tryHTML" />
       <recent name="C:\Users\Jeff Tindell\Documents\GitHub\IPACS\src" />
       <recent name="C:\Users\Jeff Tindell\Documents\GitHub\IPACS\test\src" />
       <recent name="C:\Users\Jeff Tindell\Documents\GitHub\IPACS\test\lib" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.unit_test">
+  <component name="RunManager" selected="Python.run test server">
     <configuration default="true" type="tests" factoryName="py.test">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -530,6 +514,8 @@
       <module name="IPACS" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/server.py" />
       <option name="PARAMETERS" value="" />
+      <RunnerSettings RunnerId="PythonRunner" />
+      <ConfigurationWrapper RunnerId="PythonRunner" />
       <method />
     </configuration>
     <configuration default="false" name="run test server" type="PythonConfigurationType" factoryName="Python">
@@ -584,18 +570,19 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="728" y="150" width="800" height="870" extended-state="0" />
+    <frame x="800" y="0" width="800" height="870" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32734275" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.36989796" sideWeight="0.671831" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3125" sideWeight="0.671831" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33682832" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15727392" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32896462" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -608,11 +595,40 @@
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32816902" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32896462" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31505102" sideWeight="0.671831" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.41546527" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32734275" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.js" />
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -632,6 +648,80 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/test/src/lib/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="102">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/GATHER_SCRIPTS/new_json_model">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="11" selection-start="764" selection-end="764" vertical-scroll-proportion="0.0" vertical-offset="629" max-vertical-offset="952">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GATHER_SCRIPTS/windows/windows_fingerprint.ps1">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="217" column="20" selection-start="7867" selection-end="7879" vertical-scroll-proportion="0.0" vertical-offset="3689" max-vertical-offset="5899">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/src/static/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2278">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/src/server.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="56" column="57" selection-start="1564" selection-end="1564" vertical-scroll-proportion="0.0" vertical-offset="685" max-vertical-offset="4267">
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/src/unit_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="0" selection-start="80" selection-end="80" vertical-scroll-proportion="0.0" vertical-offset="85" max-vertical-offset="187">
+          <folding>
+            <element signature="e#85#99#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="102">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lib/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="102">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/src/lib/math.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="17" selection-start="714" selection-end="727" vertical-scroll-proportion="0.0" vertical-offset="340" max-vertical-offset="493">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/GATHER_SCRIPTS/other_possible_json_model">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="17" selection-start="1002" selection-end="1002" vertical-scroll-proportion="0.0" vertical-offset="578" max-vertical-offset="1054">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/server.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="47" column="21" selection-start="1420" selection-end="1420" vertical-scroll-proportion="0.0" vertical-offset="799" max-vertical-offset="4131">
@@ -674,37 +764,14 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/GATHER_SCRIPTS/windows/windows_fingerprint.ps1">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="217" column="20" selection-start="7867" selection-end="7879" vertical-scroll-proportion="0.0" vertical-offset="3411" max-vertical-offset="5899">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/src/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="753">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/src/lib/math.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="17" selection-start="714" selection-end="727" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="493">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="753" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/GATHER_SCRIPTS/new_json_model">
       <provider selected="true" editor-type-id="text-editor">
         <state line="37" column="11" selection-start="764" selection-end="764" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="952">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/server.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="22" selection-start="1421" selection-end="1421" vertical-scroll-proportion="0.63213813" vertical-offset="221" max-vertical-offset="4131">
           <folding />
         </state>
       </provider>
@@ -730,32 +797,108 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/GATHER_SCRIPTS/other_possible_json_model">
+    <entry file="file://$PROJECT_DIR$/GATHER_SCRIPTS/windows/windows_fingerprint.ps1">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="17" selection-start="1002" selection-end="1002" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1054">
+        <state line="217" column="20" selection-start="7867" selection-end="7879" vertical-scroll-proportion="0.0" vertical-offset="3411" max-vertical-offset="5899">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/src/static/css/style.css">
+    <entry file="file://$PROJECT_DIR$/test/src/lib/crud_ops.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2278">
+        <state line="15" column="22" selection-start="495" selection-end="495" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="374">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/src/views/home_old.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="6" selection-start="0" selection-end="202" vertical-scroll-proportion="0.11691885" vertical-offset="51" max-vertical-offset="1853">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/src/unit_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="22" selection-start="247" selection-end="247" vertical-scroll-proportion="0.27755645" vertical-offset="29" max-vertical-offset="782">
+          <folding>
+            <element signature="e#85#99#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/src/lib/debug_functions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="0" selection-start="70" selection-end="70" vertical-scroll-proportion="0.09030545" vertical-offset="0" max-vertical-offset="1020">
+          <folding>
+            <element signature="e#0#25#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/src/lib/math.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="17" selection-start="714" selection-end="727" vertical-scroll-proportion="0.45152724" vertical-offset="0" max-vertical-offset="753">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/server.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="90" column="0" selection-start="2452" selection-end="2452" vertical-scroll-proportion="0.47409326" vertical-offset="1245" max-vertical-offset="4131">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/src/views/tryHTML/test.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="12" selection-start="674" selection-end="674" vertical-scroll-proportion="-0.78333336" vertical-offset="809" max-vertical-offset="1819">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/GATHER_SCRIPTS/other_possible_json_model">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="43" column="47" selection-start="1176" selection-end="1176" vertical-scroll-proportion="0.47619048" vertical-offset="541" max-vertical-offset="1003">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/home.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="50" column="22" selection-start="1162" selection-end="1169" vertical-scroll-proportion="0.45609757" vertical-offset="663" max-vertical-offset="1853">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/src/static/js/custom.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="119">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/src/server.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="57" selection-start="1564" selection-end="1564" vertical-scroll-proportion="0.0" vertical-offset="685" max-vertical-offset="4267">
+        <state line="92" column="44" selection-start="2453" selection-end="2453" vertical-scroll-proportion="0.0" vertical-offset="1266" max-vertical-offset="4318">
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/src/unit_test.py">
+    <entry file="file://$PROJECT_DIR$/test/src/views/all_devices.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="30" selection-start="76" selection-end="76" vertical-scroll-proportion="0.16306955" vertical-offset="0" max-vertical-offset="417">
+        <state line="17" column="14" selection-start="328" selection-end="328" vertical-scroll-proportion="-7.1923075" vertical-offset="0" max-vertical-offset="2652">
+          <folding>
+            <element signature="tag#head#0;tag#html#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/src/static/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="54" column="0" selection-start="835" selection-end="835" vertical-scroll-proportion="0.5298013" vertical-offset="598" max-vertical-offset="2346">
           <folding />
         </state>
       </provider>
