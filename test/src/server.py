@@ -43,7 +43,7 @@ connection = pymongo.MongoClient("mongodb://localhost")
 db = connection.ipac
 # get collections of my network devices and servers in the inventory
 collection = db.test
-#get gridfs for the two dbs
+#get gridfs for the dbs
 fs = gridfs.GridFS(db)
 
 
@@ -77,15 +77,9 @@ def fonts(filename):
 @bottle.route('/')
 def home_page():
     results = lib.crud_ops.find_all(collection)
-    print results
-    print type(results)
+    # print results
+    # print type(results)
     return bottle.template('all_devices.tpl', {'results':results})
-
-
-
-    #send the results to the home page:
-    # template_args = {'network_devices': net_devices, 'servers': servers, 'errors': err_list}
-    # return bottle.template('home.tpl', template_args)
 
 # trying out different html code:
 @bottle.route('/test')
@@ -93,6 +87,21 @@ def test_page():
     return bottle.template('tryHTML/test.tpl')
 
 
+
+@bottle.route('/device')
+def device_view():
+    return "Hello World"
+
+
+
+
+
+
+
+
+
+
+#OLD:
 
 @bottle.route('/showDevice')
 def show_device():
