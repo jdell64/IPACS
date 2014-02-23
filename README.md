@@ -2,14 +2,14 @@
 
 
 <ol>
-<li><h2>Description</h2></li>
+<h2>Description</h2>
 
 IPACS (Inventory, Performance, and Capacity System) is meant to be a free inventory system for users to track and monitor
 their assets. It is being designed with a datacenter / server enterprise model in mind, but can be adapted to other
 inventory needs.
 
 
-<li><h2>Overall Process</h2></li>
+<h2>Overall Process</h2>
 
 The current process consists of the following phases:
 
@@ -33,7 +33,7 @@ A number of revamps are desired in every phase. Notably, agents for Windows, Lin
 information. Displaying needs to be a bit more intuitive as well as useful, integrating report running.
 
 
-<li><h2>Requirements</h2></li>
+<h2>Requirements</h2>
 
 <ul>
 <li>MongoDB</li>
@@ -48,15 +48,15 @@ machine, but the next iterations will be moving to a CentOS machine for testing.
 
 
 
-<li><h2>Current Status and Features</h2></li>
+<h2>Current Status and Features</h2>
 
-<li><h2>Future Features</h2></li>
+<h2>Future Features</h2>
 
-<li><h2>Wish List</h2></li>
+<h2>Wish List</h2>
 
-<li><h2>Contributing</h2></li>
+<h2>Contributing</h2>
 
-<li><h2>Copying Permission</h2></li>
+<h2>Copying Permission</h2>
 
  This file is part of IPACS.
 
@@ -76,7 +76,7 @@ machine, but the next iterations will be moving to a CentOS machine for testing.
 
 
 
-<li><h2>Contact info</h2></li>
+<h2>Contact info</h2>
 
 comming soon
 </ol>
