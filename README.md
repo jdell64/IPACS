@@ -21,7 +21,7 @@ on the servers listed in a file specified when run (in command line).
 This script is run on the same server as the mongodb instance.
 
 The output of the script (input to the db) must be in a .json file in the following format:
-<span>
+<blockquote>
 {
         "name" : "complex_server",
         "device_type" : "server",
@@ -51,7 +51,7 @@ The output of the script (input to the db) must be in a .json file in the follow
                 }
         ]
 }
-</span>
+</blockquote>
 <span>
 <strong>note</strong>: name, device_type, os, and info are required. info must be
 list of json documents (python dictionaries, powershell hashtables... etc). Each
