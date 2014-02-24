@@ -47,7 +47,7 @@
                     %for server in win_servers:
                     <li class="device">
                         <div class="device_link">
-                            <a href="">{{server['name']}}&nbsp;</a>
+                            <a href="/showDevice?id={{server['_id']}}">{{server['name']}}&nbsp;</a>
                         </div>
                         <div class="action_panel">
                             &nbsp;<a href=""><img width="25" height="25" src="edit.png"/></a>
@@ -88,7 +88,7 @@
                     %for server in lin_servers:
                     <li class="device">
                         <div class="device_link">
-                            <a href="">{{server['name']}}&nbsp;</a>
+                            <a href="/showDevice?id={{server['_id']}}">{{server['name']}}&nbsp;</a>
                         </div>
                         <div class="action_panel">
                             &nbsp;<a href=""><img width="25" height="25" src="edit.png"/></a>
@@ -132,7 +132,7 @@
                     %for device in net_devices:
                     <li class="device">
                         <div class="device_link">
-                            <a href="">{{device['name']}}&nbsp;</a>
+                            <a href="/showDevice?id={{device['_id']}}">{{device['name']}}&nbsp;</a>
                         </div>
                         <div class="action_panel">
                             &nbsp;<a href=""><img width="25" height="25" src="edit.png"/></a>

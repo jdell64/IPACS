@@ -2,11 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="454e0096-018a-4d3a-8d34-15a5fe706eb6" name="Default" comment="">
-      <change type="DELETED" beforePath="C:\Users\Jeff Tindell\Documents\GitHub\IPACS\test\GATHER_SCRIPTS\other_possible_json_model" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/src/lib/format_functions.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/src/views/home.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/src/static/js/jquery-2.1.0.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/src/views/all_devices.tpl" afterPath="$PROJECT_DIR$/test/src/views/all_devices.tpl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/src/lib/crud_ops.py" afterPath="$PROJECT_DIR$/test/src/lib/crud_ops.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/src/static/js/custom.js" afterPath="$PROJECT_DIR$/test/src/static/js/custom.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/src/lib/debug_functions.py" afterPath="$PROJECT_DIR$/test/src/lib/debug_functions.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/src/views/device_view.tpl" afterPath="$PROJECT_DIR$/test/src/views/device_view.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/src/views/home_old.tpl" afterPath="$PROJECT_DIR$/test/src/views/home_old.tpl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/GATHER_SCRIPTS/new_json_model" afterPath="$PROJECT_DIR$/test/GATHER_SCRIPTS/new_json_model" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/src/server.py" afterPath="$PROJECT_DIR$/test/src/server.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/src/static/css/style.css" afterPath="$PROJECT_DIR$/test/src/static/css/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/src/unit_test.py" afterPath="$PROJECT_DIR$/test/src/unit_test.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="IPACS.iws" />
@@ -73,17 +82,10 @@
       <file leaf-file-name="server.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/src/server.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="68" column="20" selection-start="1813" selection-end="1813" vertical-scroll-proportion="0.0" vertical-offset="1045" max-vertical-offset="4352">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="debug_functions.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/src/lib/debug_functions.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="0" selection-start="70" selection-end="70" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1003">
-              <folding />
+            <state line="92" column="46" selection-start="2440" selection-end="2440" vertical-scroll-proportion="0.0" vertical-offset="1326" max-vertical-offset="4709">
+              <folding>
+                <element signature="e#0#11#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -91,18 +93,43 @@
       <file leaf-file-name="crud_ops.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/src/lib/crud_ops.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="17" selection-start="753" selection-end="753" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="578">
-              <folding>
-                <element signature="e#0#25#0" expanded="true" />
-              </folding>
+            <state line="36" column="20" selection-start="1136" selection-end="1136" vertical-scroll-proportion="0.0" vertical-offset="101" max-vertical-offset="714">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="new_json_model" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/test/GATHER_SCRIPTS/new_json_model">
+      <file leaf-file-name="device_view.tpl" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/src/views/device_view.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="86" column="1" selection-start="1721" selection-end="2575" vertical-scroll-proportion="0.83886254" vertical-offset="931" max-vertical-offset="1564">
+            <state line="91" column="0" selection-start="2501" selection-end="2501" vertical-scroll-proportion="-12.0" vertical-offset="1235" max-vertical-offset="1836">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="add_file_to_existing.tpl" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/views/file_control/add_file_to_existing.tpl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="10" column="36" selection-start="304" selection-end="304" vertical-scroll-proportion="-6.5384617" vertical-offset="0" max-vertical-offset="374">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="device_view.tpl" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/views/device_view.tpl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="82" column="27" selection-start="1917" selection-end="1917" vertical-scroll-proportion="0.1574074" vertical-offset="1326" max-vertical-offset="2108">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="format_functions.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/src/lib/format_functions.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="45" column="40" selection-start="1622" selection-end="1622" vertical-scroll-proportion="0.0" vertical-offset="867" max-vertical-offset="1683">
               <folding />
             </state>
           </provider>
@@ -111,36 +138,25 @@
       <file leaf-file-name="unit_test.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/src/unit_test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="22" selection-start="247" selection-end="247" vertical-scroll-proportion="0.0" vertical-offset="49" max-vertical-offset="765">
+            <state line="56" column="35" selection-start="1242" selection-end="1242" vertical-scroll-proportion="0.0" vertical-offset="334" max-vertical-offset="1411">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="all_devices.tpl" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/src/views/all_devices.tpl">
+      <file leaf-file-name="style.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/src/static/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="14" selection-start="328" selection-end="328" vertical-scroll-proportion="-7.1923075" vertical-offset="0" max-vertical-offset="2652">
-              <folding>
-                <element signature="tag#head#0;tag#html#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="device_view.tpl" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/src/views/device_view.tpl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="23" selection-start="40" selection-end="40" vertical-scroll-proportion="-1.3076923" vertical-offset="0" max-vertical-offset="1292">
+            <state line="244" column="19" selection-start="3561" selection-end="3561" vertical-scroll-proportion="-12.115385" vertical-offset="3833" max-vertical-offset="4335">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="custom.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/src/static/js/custom.js">
+      <file leaf-file-name="new_json_model" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/GATHER_SCRIPTS/new_json_model">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="119">
+            <state line="88" column="1" selection-start="2623" selection-end="2623" vertical-scroll-proportion="0.0" vertical-offset="1070" max-vertical-offset="1598">
               <folding />
             </state>
           </provider>
@@ -170,28 +186,29 @@
         <option value="$PROJECT_DIR$/test/src/functions/test_functions.py" />
         <option value="$PROJECT_DIR$/test/lib/__init__.py" />
         <option value="$PROJECT_DIR$/src/server.py" />
-        <option value="$PROJECT_DIR$/test/src/lib/debug_functions.py" />
-        <option value="$PROJECT_DIR$/test/src/unit_test.py" />
-        <option value="$PROJECT_DIR$/test/src/views/home_old.tpl" />
-        <option value="$PROJECT_DIR$/test/src/views/home.tpl" />
         <option value="$PROJECT_DIR$/test/GATHER_SCRIPTS/other_possible_json_model" />
         <option value="$PROJECT_DIR$/test/src/static/js/test.html" />
         <option value="$PROJECT_DIR$/test/src/views/tryHTML/test.tpl" />
-        <option value="$PROJECT_DIR$/test/src/static/js/custom.js" />
+        <option value="$PROJECT_DIR$/test/src/views/home_old.tpl" />
+        <option value="$PROJECT_DIR$/test/src/views/home.tpl" />
         <option value="$PROJECT_DIR$/test/src/views/all_devices.tpl" />
+        <option value="$PROJECT_DIR$/test/src/lib/debug_functions.py" />
+        <option value="$PROJECT_DIR$/test/src/static/js/jquery-2.1.0.js" />
+        <option value="$PROJECT_DIR$/test/src/static/js/custom.js" />
+        <option value="$PROJECT_DIR$/test/src/unit_test.py" />
+        <option value="$PROJECT_DIR$/test/src/lib/format_functions.py" />
+        <option value="$PROJECT_DIR$/test/GATHER_SCRIPTS/new_json_model" />
         <option value="$PROJECT_DIR$/test/src/static/css/style.css" />
+        <option value="$PROJECT_DIR$/test/src/lib/crud_ops.py" />
         <option value="$PROJECT_DIR$/test/src/server.py" />
         <option value="$PROJECT_DIR$/test/src/views/device_view.tpl" />
-        <option value="$PROJECT_DIR$/test/src/lib/crud_ops.py" />
-        <option value="$PROJECT_DIR$/test/GATHER_SCRIPTS/new_json_model" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1616" />
-    <option name="height" value="886" />
+    <option name="x" value="804" />
+    <option name="width" value="796" />
+    <option name="height" value="870" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -275,28 +292,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IPACS" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IPACS" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="lib" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -316,6 +311,60 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="GATHER_SCRIPTS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="IPACS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="IPACS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="IPACS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="IPACS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="IPACS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="IPACS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="file_control" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -544,18 +593,19 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1616" height="886" extended-state="6" />
+    <frame x="804" y="0" width="796" height="870" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32991013" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32896462" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32734275" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.153125" sideWeight="0.671831" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31410256" sideWeight="0.671831" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15404364" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29357797" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32896462" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -568,7 +618,6 @@
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32734275" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -619,13 +668,17 @@
     </option>
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/test/src/server.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="92" column="44" selection-start="2453" selection-end="2453" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4318">
-          <folding />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -679,7 +732,9 @@
     <entry file="file://$PROJECT_DIR$/test/src/server.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="56" column="57" selection-start="1564" selection-end="1564" vertical-scroll-proportion="0.0" vertical-offset="685" max-vertical-offset="4267">
-          <folding />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -707,7 +762,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/server.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="21" selection-start="1420" selection-end="1420" vertical-scroll-proportion="0.0" vertical-offset="799" max-vertical-offset="4131" />
+        <state line="47" column="21" selection-start="1420" selection-end="1420" vertical-scroll-proportion="0.0" vertical-offset="799" max-vertical-offset="4131">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
@@ -770,19 +827,9 @@
         <state line="217" column="20" selection-start="7867" selection-end="7879" vertical-scroll-proportion="0.0" vertical-offset="3411" max-vertical-offset="5899" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/src/views/home_old.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="6" selection-start="0" selection-end="202" vertical-scroll-proportion="0.11691885" vertical-offset="51" max-vertical-offset="1853" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/src/lib/math.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="20" column="17" selection-start="714" selection-end="727" vertical-scroll-proportion="0.45152724" vertical-offset="0" max-vertical-offset="753" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/server.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="90" column="0" selection-start="2452" selection-end="2452" vertical-scroll-proportion="0.47409326" vertical-offset="1245" max-vertical-offset="4131" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/src/views/tryHTML/test.tpl">
@@ -795,69 +842,139 @@
         <state line="50" column="22" selection-start="1162" selection-end="1169" vertical-scroll-proportion="0.45609757" vertical-offset="663" max-vertical-offset="1853" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/src/static/css/style.css">
+    <entry file="file://$PROJECT_DIR$/test/src/views/home_old.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="1" selection-start="739" selection-end="739" vertical-scroll-proportion="0.19205298" vertical-offset="598" max-vertical-offset="2346">
+        <state line="29" column="6" selection-start="0" selection-end="411" vertical-scroll-proportion="0.7964912" vertical-offset="39" max-vertical-offset="646">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/src/server.py">
+    <entry file="file://C:/Python27/Lib/site-packages/bson/objectid.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="68" column="20" selection-start="1813" selection-end="1813" vertical-scroll-proportion="0.0" vertical-offset="1045" max-vertical-offset="4352">
+        <state line="193" column="0" selection-start="6072" selection-end="6072" vertical-scroll-proportion="0.33333334" vertical-offset="3036" max-vertical-offset="4981">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/src/views/home.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="14" selection-start="331" selection-end="331" vertical-scroll-proportion="0.75073314" vertical-offset="67" max-vertical-offset="663">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Python27/Lib/site-packages/mako/template.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="431" column="8" selection-start="16576" selection-end="16576" vertical-scroll-proportion="0.68530023" vertical-offset="6843" max-vertical-offset="11611">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/src/lib/debug_functions.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="0" selection-start="70" selection-end="70" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1003">
+        <state line="8" column="25" selection-start="220" selection-end="220" vertical-scroll-proportion="0.24637681" vertical-offset="0" max-vertical-offset="1071">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/src/views/all_devices.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="14" selection-start="328" selection-end="328" vertical-scroll-proportion="-7.1923075" vertical-offset="0" max-vertical-offset="2652">
+        <state line="127" column="34" selection-start="3785" selection-end="3785" vertical-scroll-proportion="2.4485776" vertical-offset="938" max-vertical-offset="2652">
           <folding>
             <element signature="tag#head#0;tag#html#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/src/unit_test.py">
+    <entry file="file://$PROJECT_DIR$/test/src/static/js/jquery-2.1.0.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="22" selection-start="247" selection-end="247" vertical-scroll-proportion="0.0" vertical-offset="49" max-vertical-offset="765">
+        <state line="9092" column="32" selection-start="244673" selection-end="244673" vertical-scroll-proportion="0.3144654" vertical-offset="154414" max-vertical-offset="154972">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/src/static/js/custom.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="119">
+        <state line="0" column="0" selection-start="0" selection-end="258" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="477">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/src/views/device_view.tpl">
+    <entry file="file://$USER_HOME$/.PyCharm30/system/python_stubs/-762174762/__builtin__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="23" selection-start="40" selection-end="40" vertical-scroll-proportion="-1.3076923" vertical-offset="0" max-vertical-offset="1292">
+        <state line="3215" column="8" selection-start="110877" selection-end="110877" vertical-scroll-proportion="0.33263597" vertical-offset="54496" max-vertical-offset="86683">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/server.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="130" column="0" selection-start="3861" selection-end="3861" vertical-scroll-proportion="0.84518826" vertical-offset="1704" max-vertical-offset="4131">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/src/lib/crud_ops.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="17" selection-start="753" selection-end="753" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="578">
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
+        <state line="36" column="20" selection-start="1136" selection-end="1136" vertical-scroll-proportion="0.0" vertical-offset="101" max-vertical-offset="714">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/GATHER_SCRIPTS/new_json_model">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="86" column="1" selection-start="1721" selection-end="2575" vertical-scroll-proportion="0.83886254" vertical-offset="931" max-vertical-offset="1564">
+        <state line="88" column="1" selection-start="2623" selection-end="2623" vertical-scroll-proportion="0.0" vertical-offset="1107" max-vertical-offset="1598">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/src/static/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="244" column="19" selection-start="3561" selection-end="3561" vertical-scroll-proportion="-12.115385" vertical-offset="3833" max-vertical-offset="4335">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/src/unit_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="56" column="35" selection-start="1242" selection-end="1242" vertical-scroll-proportion="0.0" vertical-offset="589" max-vertical-offset="1411">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/src/server.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="92" column="46" selection-start="2440" selection-end="2440" vertical-scroll-proportion="0.0" vertical-offset="1326" max-vertical-offset="4709">
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/src/lib/format_functions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="40" selection-start="1622" selection-end="1622" vertical-scroll-proportion="0.0" vertical-offset="1155" max-vertical-offset="1683">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/src/views/device_view.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="91" column="0" selection-start="2501" selection-end="2501" vertical-scroll-proportion="-12.0" vertical-offset="1235" max-vertical-offset="1836">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/file_control/add_file_to_existing.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="36" selection-start="304" selection-end="304" vertical-scroll-proportion="-6.5384617" vertical-offset="0" max-vertical-offset="374">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/device_view.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="82" column="27" selection-start="1917" selection-end="1917" vertical-scroll-proportion="0.1574074" vertical-offset="1326" max-vertical-offset="2108">
           <folding />
         </state>
       </provider>

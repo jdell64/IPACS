@@ -6,6 +6,7 @@ import gridfs
 import pymongo
 import sys
 import lib.crud_ops
+from mako.template import Template
 
 __author__ = 'Jeff Tindell'
 
@@ -73,13 +74,26 @@ def fonts(filename):
 
 
 #home page
-
 @bottle.route('/')
 def home_page():
+    return bottle.template('home.tpl')
+
+
+#view all inventory
+@bottle.route('/viewAll')
+def view_all():
     results = lib.crud_ops.find_all(collection)
-    # print results
-    # print type(results)
     return bottle.template('all_devices.tpl', {'results':results})
+
+# Device view
+@bottle.route('/showDevice')
+def device_view():
+    device_id = bottle.request.query.id
+    result = lib.crud_ops.find_by_id(collection, device_id)
+    files = lib.crud_ops.get_attached_files(db.files, device_id)
+    return bottle.template('device_view.tpl', {'device':result, 'files':files})
+
+
 
 # trying out different html code:
 @bottle.route('/test')
@@ -102,45 +116,45 @@ def device_view():
 
 
 #OLD:
-
-@bottle.route('/showDevice')
-def show_device():
-    # get the url information (passed in as /showDevice?id=35jfjae3...&type=server)
-    # type will either be server or net (for now).
-
-    device_id = bottle.request.query.id
-    device_type = bottle.request.query.type
-
-    cursor = None
-    device = {}
-    attached_files = {}
-
-    if device_id: # was an id sent in?
-        # if so, search the database for the proper object
-
-        query = {"_id" : ObjectId(device_id)}
-
-        if device_type == "server":
-            cursor = db.servers.find(query)
-        elif device_type == "net":
-            cursor = db.net_devices.find(query)
-        else: # couldnt find device type
-            errors.append({'text': 'device type not recognized'})
-    else: # no id was sent in
-        errors.append({'text':'Device not found, No id sent in.'})
-
-    #after the search
-    if cursor: #if the search turn up something
-        for documents in cursor: # get the dictionaries out of the cursor
-            device = documents
-    #search the files db for any attached files
-        attached_files = db.fs.files.find({"device_id" : ObjectId(device_id)})
-
-    # return the search results
-        return bottle.template('device_view.tpl', {'device': device, 'attached_files': attached_files})
-    else: #the search was unsucessful
-        errors.append({'text': 'search turned up no results'})
-    bottle.redirect('/')
+#
+# @bottle.route('/showDevice')
+# def show_device():
+#     # get the url information (passed in as /showDevice?id=35jfjae3...&type=server)
+#     # type will either be server or net (for now).
+#
+#     device_id = bottle.request.query.id
+#     device_type = bottle.request.query.type
+#
+#     cursor = None
+#     device = {}
+#     attached_files = {}
+#
+#     if device_id: # was an id sent in?
+#         # if so, search the database for the proper object
+#
+#         query = {"_id" : ObjectId(device_id)}
+#
+#         if device_type == "server":
+#             cursor = db.servers.find(query)
+#         elif device_type == "net":
+#             cursor = db.net_devices.find(query)
+#         else: # couldnt find device type
+#             errors.append({'text': 'device type not recognized'})
+#     else: # no id was sent in
+#         errors.append({'text':'Device not found, No id sent in.'})
+#
+#     #after the search
+#     if cursor: #if the search turn up something
+#         for documents in cursor: # get the dictionaries out of the cursor
+#             device = documents
+#     #search the files db for any attached files
+#         attached_files = db.fs.files.find({"device_id" : ObjectId(device_id)})
+#
+#     # return the search results
+#         return bottle.template('device_view.tpl', {'device': device, 'attached_files': attached_files})
+#     else: #the search was unsucessful
+#         errors.append({'text': 'search turned up no results'})
+#     bottle.redirect('/')
 
 
 @bottle.route('/addDevice')

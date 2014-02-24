@@ -17,14 +17,34 @@ div div{
 div div div{
     border: 1px solid red;
 }
+
+div div div div {
+    border: 1px dashed #000000;
+
+}
+div div div div div{
+    border: 1px dotted blue;
+}
+div div div div div div{
+    border: 1px solid red;
+}
 */
-ul, li{
+
+
+
+
+
+
+
+
+#content ul, li{
     list-style:none;
     list-style-type:none;
     margin:0;
     padding:0;
+
 }
-li:nth-child(2n){
+#content li:nth-child(2n){
     background:#6C8AD5;
 }
 
@@ -40,6 +60,24 @@ li:nth-child(2n){
 #title p{
     padding-left: 30px;
     font-style:italic;
+}
+
+#nav_bar {
+    padding: 10px 0 10px 30px
+}
+
+#nav_bar ul{
+    list-style-type:none;
+
+}
+
+#nav_bar li{
+    float:left;
+}
+
+#nav_bar a{
+    display:block;
+    width:150px;
 }
 
 
@@ -94,7 +132,7 @@ border-top-right-radius: 5px;
 .body_wrapper{
     border:1px solid black;
 
-    -webkit-border-bottom-right-radius: 5px;
+-webkit-border-bottom-right-radius: 5px;
 -webkit-border-bottom-left-radius: 5px;
 -moz-border-radius-bottomright: 5px;
 -moz-border-radius-bottomleft: 5px;
@@ -125,8 +163,87 @@ border-bottom-left-radius: 5px;
 
 }
 
+#device_content{
+
+margin:10px 100px 0 100px;
+}
+
+#device_info{
+-webkit-border-bottom-right-radius: 5px;
+-webkit-border-bottom-left-radius: 5px;
+-moz-border-radius-bottomright: 5px;
+-moz-border-radius-bottomleft: 5px;
+border-bottom-right-radius: 5px;
+border-bottom-left-radius: 5px;
+
+
+
+}
+
+
+
+.device_meta table {
+    width:100%
+
+}
+
+.device_meta table tr{
+
+}
+.device_meta table tr td {
+
+}
+
+.device_meta table tr td:nth-child(odd){
+float:left;
+
+}
+
+
+.device_meta table tr td:nth-child(even){
+    float:right;
+
+}
+
+
 
 .clear_both{
     clear:both;
 
+}
+
+#change_tags {
+    padding:0;
+    margin:0;
+}
+.info_wrapper{
+
+}
+
+.device_info_section{
+    border:1px solid black;
+}
+
+.device_info_section:nth-child(even){
+    background:#6C8AD5;
+}
+
+.device_info_head{
+    font-family:"Georgia", serif;
+    font-size:30px;
+
+}
+
+.device_info_list {
+    border:1px black solid;
+    margin: 20px;
+}
+.device_info_dict{
+    border-bottom:1px black dashed;
+}
+.device_info_dict:last-child{
+    border-bottom:0;
+}
+.device_info_dict .device_info_item{
+    float:right;
 }

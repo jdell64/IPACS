@@ -12,7 +12,6 @@ connection = pymongo.MongoClient('localhost', 27017)
 db = connection.ipac
 collection = db.test
 
-print type(collection)
 query = {"device_type":"net"}
 net_devices = collection.find(query)
 
@@ -24,6 +23,45 @@ lin_servers = collection.find(query)
 
 query = {}
 allDoc = collection.find(query)
+
+query = {}
+oneDoc = collection.find_one(query)
+
+#
+# def rec_print(obj):
+#     if "output" not in rec_print.__dict__: rec_print.output = ""
+#     if isinstance(obj, unicode):
+#         rec_print.output += "<li>"+str(obj)+ "</li>"
+#     elif isinstance(obj, dict):
+#         for k, v in obj.items():
+#             rec_print.output += "<li>" +str(k) +"</li><ul>"
+#             rec_print(v)
+#             rec_print.output += "</ul>\n"
+#     elif isinstance(obj, list):
+#         for items in obj:
+#             rec_print(items)
+#     else:
+#         print "uknown type for", obj, type(obj)
+#
+#     return rec_print.output
+
+
+
+
+
+
+import  lib.format_functions
+
+spelled_out = lib.format_functions.unpack_device(oneDoc['info'])
+
+print spelled_out, type(spelled_out)
+
+
+
+
+
+
+# if isinstance(allDoc, unicode)
 #
 #
 # print "Network Devices\n"

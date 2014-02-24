@@ -17,7 +17,7 @@ def find_all(col):
     return all_devices
 
 
-def find_bY_id(col, obj_id):
+def find_by_id(col, obj_id):
     assert type(col) == pymongo.collection.Collection, 'Pass in the collection object!'
     query = {"_id": ObjectId(obj_id)}
     result = col.find_one(query)
@@ -26,3 +26,12 @@ def find_bY_id(col, obj_id):
 def search(col, obj_key, obj_value): #not sure best implementation of this
     return None
 
+
+def get_attached_files(col, obj_id):
+    assert type(col) == pymongo.collection.Collection, 'Pass in the collection object!'
+    query = {"_id": ObjectId(obj_id)}
+    results = col.find(query)
+    file_dict = []
+    for dict in results:
+        file_dict.append(dict)
+    return file_dict

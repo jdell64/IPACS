@@ -5,9 +5,7 @@
 <head>
     <title>IPAC</title>
     <link rel="stylesheet" type="text/css" href="style.css">
-
     <script src="custom.js"></script>
-
 </head>
 <body>
 
@@ -18,10 +16,13 @@
     <p>Inventory, Preformance, and Capacity</p>
 </div>
 <div id="nav_bar">
-    <a href="/viewAll">View All Inventory</a>
-
+    <ul>
+    <li><a href="/viewAll">View All Inventory</a></li>
+    <li><a href="">About</a></li>
+    </ul>
+    <div class="clear_both"></div>
 </div>
-
+<div class="clear_both"></div>
 
 <div id="content">
 

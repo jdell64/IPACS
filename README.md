@@ -20,6 +20,45 @@ on the servers listed in a file specified when run (in command line).
 
 This script is run on the same server as the mongodb instance.
 
+The output of the script (input to the db) must be in a .json file in the following format:
+<span>
+{
+        "name" : "complex_server",
+        "device_type" : "server",
+        "os" : "linux",
+        "info" : [
+                {
+                        "net_info" : [
+                                {
+                                        "ip" : "192.168.0.5",
+                                        "name" : "eth0"
+                                },
+                                {
+                                        "ip" : "192.168.0.28",
+                                        "name" : "eth1"
+                                }
+                        ]
+                },
+                {
+                        "os_info" : [{
+                                "name" : "RHEL 5.2"
+                        }]
+                },
+                {
+                        "drive_info" :[ {
+
+                        }]
+                }
+        ]
+}
+</span>
+<span>
+<strong>note</strong>: name, device_type, os, and info are required. info must be
+list of json documents (python dictionaries, powershell hashtables... etc). Each
+dictionary in the info list must also contain lists (even if there is only one item in the list). 
+</span>
+
+
 <li>Write</li>
 
 Each of the gather scripts (agents soon) will write to the database or at least send json documents to be written to the

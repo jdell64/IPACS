@@ -16,14 +16,14 @@
                         ]
                 },
                 {
-                        "os_info" : {
+                        "os_info" : [{
                                 "name" : "RHEL 5.2"
-                        }
+                        }]
                 },
                 {
-                        "drive_info" : {
+                        "drive_info" :[ {
 
-                        }
+                        }]
                 }
         ]
 }
@@ -45,14 +45,14 @@
                         ]
                 },
                 {
-                        "os_info" : {
+                        "os_info" : [{
                                 "name" : "RHEL 5.2"
-                        }
+                        }]
                 },
                 {
-                        "drive_info" : {
+                        "drive_info" : [{
 
-                        }
+                        }]
                 }
         ]
 }
@@ -74,14 +74,16 @@
                         ]
                 },
                 {
-                        "other_info" : {
-                                "name" : "RHEL 5.2"
-                        }
+                        "OS_info" : [
+                                {"name" : "CISCO"
+                                }
+                                ]
+
                 },
                 {
-                        "something_info" : {
+                        "something_info" : [{
 
-                        }
+                        }]
                 }
         ]
 }
