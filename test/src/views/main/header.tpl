@@ -1,6 +1,6 @@
 <div id="title">
     <h1>IPAC</h1>
-    <img src="header/IPAC_logo.png">
+    <a href="https://github.com/jdell64/IPACS"><img src="header/IPAC_logo.png"></a>
     <p>Inventory, Preformance, and Capacity</p>
 </div>
 

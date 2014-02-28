@@ -44,12 +44,12 @@
                     <option value="other">Other...</option>
                 </select>
                 <input type="text" name="other_info" id="dev_info_other_text" style='display:none;'/>
-                <br><br> NEXT BUTTON... TAKES YOU TO:<br><br>
+                <br><br> NEXT BUTTON (creates headers or dictionary keys) TAKES YOU TO:<br><br>
                 TITLE (eg. Net Info, or OS Info)<br>
                 Key: <input type="text"> <br>
                 Value: <input type="text">
                 <br>Add more button<br>
-                <br>next button<br>
+                <br>next button (loop through the headers/keys).<br>
 
 
             </div>

@@ -3,18 +3,18 @@
   <component name="ChangeListManager">
     <list default="true" id="454e0096-018a-4d3a-8d34-15a5fe706eb6" name="Default" comment="">
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/src/views/about.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/src/views/devices/add_device.tpl" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/src/views/main/footer.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/src/views/main/header.tpl" />
       <change type="DELETED" beforePath="C:\Users\Jeff Tindell\Documents\GitHub\IPACS\test\src\views\home_old.tpl" afterPath="" />
       <change type="MOVED" beforePath="C:\Users\Jeff Tindell\Documents\GitHub\IPACS\test\src\views\all_devices.tpl" afterPath="$PROJECT_DIR$/test/src/views/devices/all_devices.tpl" />
       <change type="MOVED" beforePath="C:\Users\Jeff Tindell\Documents\GitHub\IPACS\test\src\views\device_view.tpl" afterPath="$PROJECT_DIR$/test/src/views/devices/device_view.tpl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/src/views/devices/add_device.tpl" afterPath="$PROJECT_DIR$/test/src/views/devices/add_device.tpl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/file_control/add_file_to_existing.tpl" afterPath="$PROJECT_DIR$/src/views/file_control/add_file_to_existing.tpl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/src/lib/crud_ops.py" afterPath="$PROJECT_DIR$/test/src/lib/crud_ops.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/src/static/js/custom.js" afterPath="$PROJECT_DIR$/test/src/static/js/custom.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/src/views/file_control/edit_existing_filename.tpl" afterPath="$PROJECT_DIR$/test/src/views/file_control/edit_existing_filename.tpl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/src/lib/format_functions.py" afterPath="$PROJECT_DIR$/test/src/lib/format_functions.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/src/views/main/header.tpl" afterPath="$PROJECT_DIR$/test/src/views/main/header.tpl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/src/views/home.tpl" afterPath="$PROJECT_DIR$/test/src/views/home.tpl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/GATHER_SCRIPTS/new_json_model" afterPath="$PROJECT_DIR$/test/GATHER_SCRIPTS/new_json_model" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/src/server.py" afterPath="$PROJECT_DIR$/test/src/server.py" />
@@ -97,7 +97,7 @@
       <file leaf-file-name="add_device.tpl" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/src/views/devices/add_device.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="33" selection-start="269" selection-end="269" vertical-scroll-proportion="-4.3461537" vertical-offset="125" max-vertical-offset="1224">
+            <state line="60" column="0" selection-start="1862" selection-end="1862" vertical-scroll-proportion="-11.0" vertical-offset="734" max-vertical-offset="1224">
               <folding>
                 <element signature="n#style#0;n#input#0;n#div#0;n#div#0;n#div#3;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -108,7 +108,7 @@
       <file leaf-file-name="footer.tpl" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/src/views/main/footer.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="0" selection-start="407" selection-end="407" vertical-scroll-proportion="0.0" vertical-offset="221" max-vertical-offset="357">
+            <state line="13" column="0" selection-start="407" selection-end="407" vertical-scroll-proportion="-8.5" vertical-offset="0" max-vertical-offset="357">
               <folding />
             </state>
           </provider>
@@ -135,16 +135,7 @@
       <file leaf-file-name="about.tpl" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/src/views/about.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="0" selection-start="257" selection-end="257" vertical-scroll-proportion="0.0" vertical-offset="289" max-vertical-offset="544">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="149" column="28" selection-start="4553" selection-end="4553" vertical-scroll-proportion="0.7906977" vertical-offset="2125" max-vertical-offset="3128">
+            <state line="17" column="0" selection-start="257" selection-end="257" vertical-scroll-proportion="-9.038462" vertical-offset="54" max-vertical-offset="544">
               <folding />
             </state>
           </provider>
@@ -153,16 +144,16 @@
       <file leaf-file-name="format_functions.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/src/lib/format_functions.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="124" column="104" selection-start="5020" selection-end="5020" vertical-scroll-proportion="0.0" vertical-offset="2020" max-vertical-offset="2465">
+            <state line="124" column="104" selection-start="5020" selection-end="5020" vertical-scroll-proportion="0.0" vertical-offset="1949" max-vertical-offset="2465">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="header.tpl" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="header.tpl" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/src/views/main/header.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="6" selection-start="357" selection-end="357" vertical-scroll-proportion="0.0" vertical-offset="221" max-vertical-offset="323">
+            <state line="2" column="47" selection-start="82" selection-end="82" vertical-scroll-proportion="0.07727273" vertical-offset="0" max-vertical-offset="440">
               <folding />
             </state>
           </provider>
@@ -211,18 +202,16 @@
         <option value="$PROJECT_DIR$/test/src/views/home.tpl" />
         <option value="$PROJECT_DIR$/test/src/static/css/style.css" />
         <option value="$PROJECT_DIR$/test/src/views/about.tpl" />
-        <option value="$PROJECT_DIR$/test/src/views/main/header.tpl" />
         <option value="$PROJECT_DIR$/test/src/server.py" />
-        <option value="$PROJECT_DIR$/test/src/views/devices/add_device.tpl" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/test/src/views/devices/add_device.tpl" />
+        <option value="$PROJECT_DIR$/test/src/views/main/header.tpl" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1616" />
-    <option name="height" value="886" />
+    <option name="width" value="800" />
+    <option name="height" value="870" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -580,18 +569,18 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1616" height="886" extended-state="6" />
+    <frame x="0" y="0" width="800" height="870" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32896462" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.159375" sideWeight="0.671831" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3252551" sideWeight="0.671831" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3042362" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.310616" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32896462" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -858,30 +847,9 @@
         <state line="14" column="71" selection-start="497" selection-end="497" vertical-scroll-proportion="0.54587156" vertical-offset="0" max-vertical-offset="442" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/src/views/main/footer.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="0" selection-start="407" selection-end="407" vertical-scroll-proportion="0.0" vertical-offset="221" max-vertical-offset="357">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/src/static/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="42" column="20" selection-start="689" selection-end="689" vertical-scroll-proportion="0.0" vertical-offset="424" max-vertical-offset="5168" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/src/views/about.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="0" selection-start="257" selection-end="257" vertical-scroll-proportion="0.0" vertical-offset="289" max-vertical-offset="544">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/src/views/main/header.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="6" selection-start="357" selection-end="357" vertical-scroll-proportion="0.0" vertical-offset="221" max-vertical-offset="323">
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/GATHER_SCRIPTS/windows/windows_fingerprint.ps1">
@@ -898,23 +866,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/GATHER_SCRIPTS/new_json_model">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="25" selection-start="570" selection-end="570" vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="1717">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/src/views/home.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="7" selection-start="188" selection-end="188" vertical-scroll-proportion="-5.230769" vertical-offset="0" max-vertical-offset="612">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/server.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="40" column="0" selection-start="1153" selection-end="1153" vertical-scroll-proportion="0.38202247" vertical-offset="408" max-vertical-offset="4131">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="138" column="0" selection-start="3820" selection-end="3820" vertical-scroll-proportion="0.4966292" vertical-offset="2125" max-vertical-offset="3128">
           <folding />
         </state>
       </provider>
@@ -935,21 +899,46 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/test/src/views/about.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="0" selection-start="257" selection-end="257" vertical-scroll-proportion="-9.038462" vertical-offset="54" max-vertical-offset="544">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/GATHER_SCRIPTS/new_json_model">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="25" selection-start="570" selection-end="570" vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="1717">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/src/views/home.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="7" selection-start="188" selection-end="188" vertical-scroll-proportion="-5.230769" vertical-offset="0" max-vertical-offset="612">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/src/views/main/footer.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="0" selection-start="407" selection-end="407" vertical-scroll-proportion="-8.5" vertical-offset="0" max-vertical-offset="357">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/test/src/views/devices/add_device.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="33" selection-start="269" selection-end="269" vertical-scroll-proportion="-4.3461537" vertical-offset="125" max-vertical-offset="1224">
+        <state line="60" column="0" selection-start="1862" selection-end="1862" vertical-scroll-proportion="-11.0" vertical-offset="734" max-vertical-offset="1224">
           <folding>
             <element signature="n#style#0;n#input#0;n#div#0;n#div#0;n#div#3;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
+    <entry file="file://$PROJECT_DIR$/test/src/views/main/header.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="149" column="28" selection-start="4553" selection-end="4553" vertical-scroll-proportion="0.7906977" vertical-offset="2125" max-vertical-offset="3128">
+        <state line="2" column="47" selection-start="82" selection-end="82" vertical-scroll-proportion="0.07727273" vertical-offset="0" max-vertical-offset="440">
           <folding />
         </state>
       </provider>

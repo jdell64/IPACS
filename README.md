@@ -1,15 +1,17 @@
-<h1>IPACS</h1>
+IPACS
+=====
 
 
-<ol>
-<h2>Description</h2>
+Description
+-----------
 
 IPACS (Inventory, Performance, and Capacity System) is meant to be a free inventory system for users to track and monitor
 their assets. It is being designed with a datacenter / server enterprise model in mind, but can be adapted to other
 inventory needs.
 
 
-<h2>Overall Process</h2>
+Overall Process
+---------------
 
 The current process consists of the following phases:
 
@@ -57,7 +59,6 @@ The output of the script (input to the db) must be in a .json file in the follow
 list of json documents (python dictionaries, powershell hashtables... etc). Each
 dictionary in the info list must also contain lists (even if there is only one item in the list). 
 </span>
-
 
 <li>Write</li>
 
@@ -125,22 +126,49 @@ for .3 release
 -   separate business logic into external class
 -   "remote to machine" link
 
+for .9 release
+--------------
+
+-   Evaluate bottle as primary webapp technology. Possibly switch to django, pyramid, flask (in anticipation
+	of future changes).
+
+for 1.0 release
+---------------
+
+-   Simple Authentication
+-   HTTPS
 
 
+for 2.0 release
+---------------
+
+-   ldap integration with most ldap (specifically AD) for SSO
 
 Future Features
 ---------------
 
-ORM -
+-   ORM
+    ---
+	
+	While I am testing with mongoDB, I would like to use some type of ORM like hibernate so this application is not
+	dependant on any particular database technology. This would also help if a particular user of this software had 
+	a requirement to use a particular database.
+	
+-   Install Script
+    --------------	
+	I would like to make it as simple as possible to run this software. Putting together an install script or at least
+	an install document would be paramount on the distribution of this software.
+	
+-   Additional Fingerprinting Capabilities
+    --------------------------------------
 
-Linux Script
+	Right now, the fingerprint.ps1 script is the only script capable of fingerprinting systems. The script needs to be expanded
+	to fingerprint linux and solaris hosts as well as network devices.
+	
+	There is also the need to develop a script to run on a linux server as I do not want this system to be dependant on a windows server.
 
-Solaris Script
-
-Network Devices Script
-
--   Auto Discovery
-    --------------
+-   Auto Discovery / new work flow
+    ------------------------------
 
     A list of IPs be populated by a user. The system will maintain this list, and if it can reach the host at least once a week,
     the host will remain on the list. If a host cannot be reached within 7 days, it will be moved to a seperate list for user
@@ -175,5 +203,5 @@ Network Devices Script
 
 <h2>Contact info</h2>
 
-comming soon
+coming soon
 </ol>
