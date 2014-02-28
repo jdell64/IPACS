@@ -29,9 +29,11 @@ def search(col, obj_key, obj_value): #not sure best implementation of this
 
 def get_attached_files(col, obj_id):
     assert type(col) == pymongo.collection.Collection, 'Pass in the collection object!'
-    query = {"_id": ObjectId(obj_id)}
+    query = {"device_id": ObjectId(obj_id)}
     results = col.find(query)
     file_dict = []
     for dict in results:
         file_dict.append(dict)
     return file_dict
+
+

@@ -1,3 +1,5 @@
+from bson import ObjectId
+
 __author__ = 'Jeff Tindell'
 
 # import lib.math
@@ -49,13 +51,13 @@ oneDoc = collection.find_one(query)
 
 
 
-
-import  lib.format_functions
-
-spelled_out = lib.format_functions.unpack_device(oneDoc['info'])
-
-print spelled_out, type(spelled_out)
-
+# Trying out the unpack_device function
+#
+# import  lib.format_functions
+#
+# spelled_out = lib.format_functions.unpack_device(oneDoc['info'])
+#
+# print spelled_out, type(spelled_out)
 
 
 
@@ -75,4 +77,10 @@ print spelled_out, type(spelled_out)
 # print "all"
 # lib.debug_functions.recursive_print(allDoc)
 
+
+
+obj_id = ObjectId('530ca5942da57ac8163b33d6')
+
+print type(obj_id.__str__())
+print str(obj_id.binary)
 

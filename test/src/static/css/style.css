@@ -34,6 +34,14 @@ div div div div div div{
 
 
 
+body{
+    margin-left:200px;
+    margin-right:200px;
+}
+
+body p {
+    margin-top:20px;
+}
 
 
 
@@ -50,36 +58,49 @@ div div div div div div{
 
 #title{
 
-    padding:20px 100px 0 100px;
 }
 #title h1{
-    font-family:"Georgia", serif;
-    font-size:60px;
+    margin: 0 0 0 -2000px;
+    height:0px;
+
+}
+#title img{
+
 }
 
 #title p{
     padding-left: 30px;
     font-style:italic;
+    height:0;
+    margin: 0 0 0 -2000px;
 }
 
 #nav_bar {
-    padding: 10px 0 10px 30px
-}
-
-#nav_bar ul{
-    list-style-type:none;
 
 }
 
-#nav_bar li{
-    float:left;
-}
 
-#nav_bar a{
-    display:block;
-    width:150px;
-}
-
+#nav {
+    width: 100%;
+    float: left;
+    margin: 0 0 3em 0;
+    padding: 0;
+    list-style: none;
+    background-color: #f2f2f2;
+    border-bottom: 1px solid #ccc; 
+    border-top: 1px solid #ccc; }
+#nav li {
+    float: left; }
+#nav li a {
+    display: block;
+    padding: 8px 15px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #069;
+    border-right: 1px solid #ccc; }
+#nav li a:hover {
+    color: #c00;
+    background-color: #fff; }
 
 
 #content{
@@ -246,4 +267,32 @@ float:left;
 }
 .device_info_dict .device_info_item{
     float:right;
+}
+
+footer{
+    margin-top:100px;
+}
+
+
+footer p{
+    text-align:center;
+}
+
+
+footer img {
+    width:100px;
+
+}
+footer ul{
+    width:250px;
+    margin:auto;
+}
+footer li{
+    list-style-type:none;
+    display:inline;
+    padding: 10px;
+    }
+
+#bizbiz_logo{
+    width:150px;
 }

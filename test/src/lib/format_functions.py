@@ -91,3 +91,50 @@ def unpack_device(device):
 
 
     return "<div class=\"info_wrapper\">" + str(unpack_device.output) + "</div>"
+
+
+def unpack_files(files):
+    if "output" not in unpack_files.__dict__: unpack_files.output = ""
+    if "count" not in unpack_files.__dict__: unpack_files.count = 0
+    if files=="CLEAR":
+        unpack_files.output = ""
+        unpack_files.count=0
+        return None
+    assert isinstance(files, list),"wrong type"
+    unpack_files.output += "<div class=\"file_list_container\">"
+    # TODO: make header here
+    for file in files:
+        unpack_files.output += "<div class=\"file_wrapper\">"
+        unpack_files.output += "<div class=\"file_descriptor\">"
+        file_id = file['_id'].__str__()
+        unpack_files.output += "<a href=\"/download?id="+file_id+"\">"
+        unpack_files.output += str(file['filename']) # TODO: make url here
+        unpack_files.output += "</a></div>"
+        unpack_files.output += "<div class=\"file_descriptor\">"
+        unpack_files.output += str(file['length'])
+        unpack_files.output += "</div>"
+        unpack_files.output += "<div class=\"file_descriptor\">"
+        unpack_files.output += str(file['uploadDate'])
+        unpack_files.output += "</div>"
+        unpack_files.output += "</div><br>" #end file_wrapper
+        #Add the actions div
+        device_id=str(file['device_id'].__str__())
+        act_div  = "<div class=\"file_actions\">"
+        act_div += "<a href=\"/removeFile?fid="+file_id+"&did="+device_id+"\">"
+        act_div += "<img width=\"15\" height=\"15\" src=\"delete.png\"/></a>"
+        act_div += "<a href=\"/editFilename?fid="+file_id+"&did="+device_id+"&ofn="+file['filename']+"\">"
+        act_div += "<img width=\"15\" height=\"15\" src=\"edit.png\"/></a>"
+
+        unpack_files.output += act_div
+    unpack_files.output += "</div><br>" #end file list container
+
+    return unpack_files.output
+
+
+#
+# <a href="/removeFile?fid={{file['_id']}}&did={{device['_id']}}&type={{device['type']}}">
+#                      <img width="15" height="15" src="delete.png"/>
+#                  </a>&nbsp;
+#                  <a href="/editFilename?fid={{file['_id']}}&did={{device['_id']}}&type={{device['type']}}&ofn={{file['filename']}}">
+#                      <img width="15" height="15" src="edit.png"/>
+#                  </a>

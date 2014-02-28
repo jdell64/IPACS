@@ -15,14 +15,7 @@
 %lin_servers = results['lin']
 %net_devices = results['net']
 
-<div id="title">
-    <h1>IPAC</h1>
-    <p>Inventory, Preformance, and Capacity</p>
-</div>
-<div id="nav_bar">
-
-
-</div>
+%include('main/header.tpl')
 
 
 <div id="content">
@@ -153,5 +146,6 @@
     %end #end if -- net devices
 </div>
 
+%include('main/footer.tpl')
 </body>
 </html>

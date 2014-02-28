@@ -11,16 +11,8 @@
 </head>
 <body>
 
+%include('main/header.tpl')
 
-<div id="title">
-    <h1>IPAC</h1>
-
-    <p>Inventory, Preformance, and Capacity</p>
-</div>
-<div id="nav_bar">
-
-
-</div>
 
 %import lib.format_functions
 
@@ -61,7 +53,7 @@
                 %info_html = lib.format_functions.unpack_device(device['info'])
                 {{info_html}}
                 %lib.format_functions.unpack_device("CLEAR")
-                <script src="custom.js"></script>
+
 
             </div>
             <div class="clear_both"></div>
@@ -75,9 +67,11 @@
         <div class="body_wrapper">
             <h3>Attached Files:</h3>
 
-            <div class="attached_files">
-                %if files.count < 0:
-                {{files}}
+            <div id="attached_files">
+                %if attached_files.count:
+                %file_html = lib.format_functions.unpack_files(attached_files)
+                {{file_html}}
+                %lib.format_functions.unpack_files("CLEAR")
                 %else:
                 <p>No files currently attached.</p>
                 %end
@@ -96,8 +90,13 @@
     </div>
 </div>
 
-
 <!--Call the js after the pageload-->
+<script src="custom.js"></script>
+
+
+<!--TODO: add footer-->
+
+%include('main/footer.tpl')
 
 </body>
 </html>

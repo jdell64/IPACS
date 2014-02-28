@@ -5,29 +5,23 @@
 <head>
     <title>IPAC</title>
     <link rel="stylesheet" type="text/css" href="style.css">
-
     <script src="custom.js"></script>
-
 </head>
 <body>
+%include('main/header.tpl')
 
+<section>
+<p>
+   ABOUT
+</p>
+<p>
 
+</p>
+<p>
 
-<div id="title">
-    <h1>IPAC</h1>
-    <p>Inventory, Preformance, and Capacity</p>
-</div>
-<div id="nav_bar">
-    <a href="/viewAll">View All Inventory</a>
+</p>
+</section>
 
-</div>
-
-
-<div id="content">
-
-
-
-</div>
-
+%include('main/footer.tpl')
 </body>
 </html>

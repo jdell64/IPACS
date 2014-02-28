@@ -77,7 +77,7 @@ information. Displaying needs to be a bit more intuitive as well as useful, inte
 <ul>
 <li>MongoDB</li>
 <li>Python 2.7</li>
-<li>bottle.py</li>
+<li>bottle.py version < .12</li>
 <li>pymongo</li>
 <li>Server</li>
 </ul>
@@ -87,9 +87,67 @@ machine, but the next iterations will be moving to a CentOS machine for testing.
 
 
 
+
 <h2>Current Status and Features</h2>
 
-<h2>Future Features</h2>
+
+<h2>Required status for .2 release</h2>
+
+The minimum requirements for the next version to be released are:
+
+-   Create an "add new device" form with the minimum requirements of Name, Type, and info.
+-   Hyperlink to create new device on bottom of "viewAll" page. This is important because if a device type does not exist, you will still want to be able to create it.
+-   Edit device form.
+-   "Actions" li in the nav bar
+-   Readme file standardized in md syntax
+-   About page
+-   Home page written
+-   css for attached files
+-   attached files allowed file extensions.
+-   test copied to project home
+
+Required status for .21 release
+------------------------------
+
+-   Logo for the tab in browsers
+-   logo for the header
+
+
+for .22 release
+---------------
+
+-   Edit filename pop-up
+-   add nav tag
+
+for .3 release
+--------------
+
+-   separate business logic into external class
+-   "remote to machine" link
+
+
+
+
+Future Features
+---------------
+
+ORM -
+
+Linux Script
+
+Solaris Script
+
+Network Devices Script
+
+-   Auto Discovery
+    --------------
+
+    A list of IPs be populated by a user. The system will maintain this list, and if it can reach the host at least once a week,
+    the host will remain on the list. If a host cannot be reached within 7 days, it will be moved to a seperate list for user
+    action (the list will be "unreachable_hosts" or something). The user can then decom the server or put it in a reserved list.
+    Decoming the server will release the ip for use in the inventory system. When an IP is put in the original list, it will be
+    fingerprinted and the resulting data stored in the db. If the system cannot be fingerprinted within a week, it will be moved
+    to the unreachable list.
 
 <h2>Wish List</h2>
 
