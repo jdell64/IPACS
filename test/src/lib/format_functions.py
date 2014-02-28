@@ -1,3 +1,6 @@
+from datetime import date
+from dateutil import tz
+
 __author__ = 'Jeff Tindell'
 
 def default_unpack(obj):
@@ -102,39 +105,43 @@ def unpack_files(files):
         return None
     assert isinstance(files, list),"wrong type"
     unpack_files.output += "<div class=\"file_list_container\">"
+    unpack_files.output += "<div id=\"attached_file_header\">"
+    unpack_files.output +=  "<div>Filename</div><div>Size</div><div>Upload Date</div></div>"
+    unpack_files.output += "<div class=\"clear_both\"/>"
     # TODO: make header here
     for file in files:
         unpack_files.output += "<div class=\"file_wrapper\">"
         unpack_files.output += "<div class=\"file_descriptor\">"
         file_id = file['_id'].__str__()
         unpack_files.output += "<a href=\"/download?id="+file_id+"\">"
+
         unpack_files.output += str(file['filename']) # TODO: make url here
         unpack_files.output += "</a></div>"
         unpack_files.output += "<div class=\"file_descriptor\">"
-        unpack_files.output += str(file['length'])
+        size = float(file['length'])
+        size_in_mb = "%.2f" % (size/1024)
+        unpack_files.output += size_in_mb + " MB"
         unpack_files.output += "</div>"
         unpack_files.output += "<div class=\"file_descriptor\">"
-        unpack_files.output += str(file['uploadDate'])
+        dt= file['uploadDate']
+        from_tz = tz.gettz('UTC')
+        to_tz = tz.gettz('America/New_York')
+        new_dt = dt.replace(tzinfo=from_tz)
+        new_dt = new_dt.astimezone(to_tz).strftime('%a %b %d %X')
+
+        unpack_files.output += new_dt
         unpack_files.output += "</div>"
-        unpack_files.output += "</div><br>" #end file_wrapper
+        unpack_files.output += "</div>" #end file_wrapper
         #Add the actions div
         device_id=str(file['device_id'].__str__())
-        act_div  = "<div class=\"file_actions\">"
-        act_div += "<a href=\"/removeFile?fid="+file_id+"&did="+device_id+"\">"
-        act_div += "<img width=\"15\" height=\"15\" src=\"delete.png\"/></a>"
+        act_div  = "<div class=\"file_actions\"><div class=\"clear_both\"/>"
         act_div += "<a href=\"/editFilename?fid="+file_id+"&did="+device_id+"&ofn="+file['filename']+"\">"
-        act_div += "<img width=\"15\" height=\"15\" src=\"edit.png\"/></a>"
+        act_div += "<img width=\"20\" height=\"20\" src=\"edit.png\"/></a>&nbsp;"
+        act_div += "<a href=\"/removeFile?fid="+file_id+"&did="+device_id+"\">"
+        act_div += "<img width=\"20\" height=\"20\" src=\"delete.png\"/></a></div>"
 
         unpack_files.output += act_div
-    unpack_files.output += "</div><br>" #end file list container
+    unpack_files.output += "<div class=\"clear_both\"/></div>" #end file list container
 
     return unpack_files.output
 
-
-#
-# <a href="/removeFile?fid={{file['_id']}}&did={{device['_id']}}&type={{device['type']}}">
-#                      <img width="15" height="15" src="delete.png"/>
-#                  </a>&nbsp;
-#                  <a href="/editFilename?fid={{file['_id']}}&did={{device['_id']}}&type={{device['type']}}&ofn={{file['filename']}}">
-#                      <img width="15" height="15" src="edit.png"/>
-#                  </a>

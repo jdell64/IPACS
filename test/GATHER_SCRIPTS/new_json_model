@@ -1,5 +1,5 @@
 {
-        "name" : "complex_server",
+        "name" : "DEVICE_NAME",
         "device_type" : "server",
         "os" : "linux",
         "info" : [
@@ -53,7 +53,7 @@
                 },
                 {
                         "os_info" : [{
-                                "name" : "RHEL 5.2"
+                                "name" : "windows8.1"
                         }]
                 },
                 {

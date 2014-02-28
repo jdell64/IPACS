@@ -68,7 +68,9 @@
             <h3>Attached Files:</h3>
 
             <div id="attached_files">
-                %if attached_files.count:
+                %if len(attached_files) > 0:
+
+
                 %file_html = lib.format_functions.unpack_files(attached_files)
                 {{file_html}}
                 %lib.format_functions.unpack_files("CLEAR")

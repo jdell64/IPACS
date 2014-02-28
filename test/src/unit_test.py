@@ -1,4 +1,6 @@
+from datetime import datetime
 from bson import ObjectId
+from dateutil import tz
 
 __author__ = 'Jeff Tindell'
 
@@ -7,7 +9,6 @@ __author__ = 'Jeff Tindell'
 
 
 import pymongo
-import lib.debug_functions
 
 
 connection = pymongo.MongoClient('localhost', 27017)
@@ -77,10 +78,21 @@ oneDoc = collection.find_one(query)
 # print "all"
 # lib.debug_functions.recursive_print(allDoc)
 
+#
+#
+# obj_id = ObjectId('530ca5942da57ac8163b33d6')
+#
+# print type(obj_id.__str__())
+# print str(obj_id.binary)
+#
 
+fmt = '%m-%d-%Y %H:%M:%S'
 
-obj_id = ObjectId('530ca5942da57ac8163b33d6')
-
-print type(obj_id.__str__())
-print str(obj_id.binary)
-
+file = db.fs.files.find_one({"_id" : ObjectId("5310aa542da57aa168e653ea")})
+dt= file['uploadDate']
+from_tz = tz.gettz('UTC')
+to_tz = tz.gettz('America/New_York')
+new_dt = dt.replace(tzinfo=from_tz)
+new_dt = new_dt.astimezone(to_tz).strftime('%a %b %d %X')
+dt = dt.strftime('%a %b %d %X')
+print dt, new_dt
