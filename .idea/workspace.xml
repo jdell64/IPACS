@@ -1,21 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="454e0096-018a-4d3a-8d34-15a5fe706eb6" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/src/static/css/test.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/src/static/js/test.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/src/static/img/edit.png" afterPath="$PROJECT_DIR$/test/src/static/img/edit.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/src/views/devices/add_device.tpl" afterPath="$PROJECT_DIR$/test/src/views/devices/add_device.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/src/static/js/custom.js" afterPath="$PROJECT_DIR$/test/src/static/js/custom.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/src/views/devices/device_view.tpl" afterPath="$PROJECT_DIR$/test/src/views/devices/device_view.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/src/lib/format_functions.py" afterPath="$PROJECT_DIR$/test/src/lib/format_functions.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/src/views/main/header.tpl" afterPath="$PROJECT_DIR$/test/src/views/main/header.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/GATHER_SCRIPTS/new_json_model" afterPath="$PROJECT_DIR$/test/GATHER_SCRIPTS/new_json_model" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/src/static/css/style.css" afterPath="$PROJECT_DIR$/test/src/static/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/src/views/tryHTML/test.tpl" afterPath="$PROJECT_DIR$/test/src/views/tryHTML/test.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/src/unit_test.py" afterPath="$PROJECT_DIR$/test/src/unit_test.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="454e0096-018a-4d3a-8d34-15a5fe706eb6" name="Default" comment="" />
     <ignored path="IPACS.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -109,7 +95,7 @@
       <file leaf-file-name="custom.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/src/static/js/custom.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="12" selection-start="1235" selection-end="1235" vertical-scroll-proportion="0.44323143" vertical-offset="596" max-vertical-offset="1411">
+            <state line="47" column="0" selection-start="1223" selection-end="1223" vertical-scroll-proportion="0.44323143" vertical-offset="596" max-vertical-offset="1411">
               <folding />
             </state>
           </provider>
@@ -695,7 +681,7 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.310616" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.310616" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32896462" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1081,7 +1067,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/src/static/js/custom.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="12" selection-start="1235" selection-end="1235" vertical-scroll-proportion="0.44323143" vertical-offset="596" max-vertical-offset="1411">
+        <state line="47" column="0" selection-start="1223" selection-end="1223" vertical-scroll-proportion="0.44323143" vertical-offset="596" max-vertical-offset="1411">
           <folding />
         </state>
       </provider>

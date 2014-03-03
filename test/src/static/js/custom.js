@@ -45,7 +45,7 @@ $(document).ready(function () {
 
         var selectedOpts = $('#lstBox2 option:selected');
         if (selectedOpts.length == 0) {
-            
+
             e.preventDefault();
         }
 
