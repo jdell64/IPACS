@@ -78,7 +78,7 @@ information. Displaying needs to be a bit more intuitive as well as useful, inte
 <ul>
 <li>MongoDB</li>
 <li>Python 2.7</li>
-<li>bottle.py version < .12</li>
+<li>bottle.py version 0.12 or greater</li>
 <li>pymongo</li>
 <li>Server</li>
 </ul>
