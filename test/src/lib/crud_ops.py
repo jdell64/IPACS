@@ -35,5 +35,3 @@ def get_attached_files(col, obj_id):
     for dict in results:
         file_dict.append(dict)
     return file_dict
-
-

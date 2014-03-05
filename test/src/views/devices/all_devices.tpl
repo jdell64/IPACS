@@ -17,7 +17,7 @@
 
 %include('main/header.tpl')
 
-
+<!--TODO: turn these into functions taking the list as input and outputting the html -->
 <div id="content">
     <!--Windows servers-->
     %if win_servers.count() > 0 :
@@ -144,6 +144,9 @@
         <div class="clear_both"></div>
     </div>
     %end #end if -- net devices
+
+    <!--TODO: add "other devices" for those that can't be classified.-->
+
 </div>
 
 %include('main/footer.tpl')

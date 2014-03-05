@@ -1,3 +1,4 @@
+import ast
 import copy
 import mimetypes
 import bottle
@@ -106,8 +107,16 @@ def device_view():
     return bottle.template('devices/device_view.tpl', {'device':result, 'attached_files':files})
 
 @bottle.route('/addDevice')
-def add_device():
+def add_device_form():
     return bottle.template('devices/add_device.tpl')
+
+@bottle.route('/addDevice', method='POST')
+def add_device_post():
+    json = bottle.request.body.read()
+    dict = ast.literal_eval(json) #TODO: try around this
+    #TODO: verify data before taking into db
+    collection.insert(dict)
+    return bottle.template('devices/add_device.tpl') #TODO return success ro fail page
 
 
 
