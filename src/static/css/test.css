@@ -1,0 +1,14 @@
+.clear_both {
+    clear:both;
+}
+#lstBox1 {
+    float:left;
+    width:160px;
+}
+#arrows {
+    float:left;
+}
+#lstBox2 {
+    float:left;
+    width:160px;
+}

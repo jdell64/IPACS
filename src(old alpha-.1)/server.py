@@ -5,8 +5,6 @@ from bson import ObjectId
 import gridfs
 import pymongo
 import sys
-import lib.crud_ops
-from mako.template import Template
 
 __author__ = 'Jeff Tindell'
 
@@ -41,13 +39,13 @@ __author__ = 'Jeff Tindell'
 
 #establish a connection to the db:
 connection = pymongo.MongoClient("mongodb://localhost")
-db = connection.ipac
+db = connection.pacman
 # get collections of my network devices and servers in the inventory
-collection = db.test
-#get gridfs for the dbs
+net_devices_col = db.net_devices
+servers_col = db.servers
+errors = []
+#get gridfs for the two dbs
 fs = gridfs.GridFS(db)
-
-
 
 
 
@@ -72,57 +70,87 @@ def fonts(filename):
     return bottle.static_file(filename, root='static/fonts')
 
 
-###########################################
-###    NAV BAR MAPPINGS
-###########################################
+
 #home page
+
 @bottle.route('/')
 def home_page():
-    return bottle.template('home.tpl')
+    #copy any errors out of the errors dict, and then empty the dict
+    err_list = copy.deepcopy(errors)
+    errors[:] = []
 
-
-#view all inventory
-@bottle.route('/viewAll')
-def view_all():
-    results = lib.crud_ops.find_all(collection)
-    return bottle.template('devices/all_devices.tpl', {'results':results})
-
-@bottle.route('/about')
-def about_page():
-    return bottle.template('about.tpl')
+    #run a search for all servers and net_devices
+    net_devices = net_devices_col.find()
+    servers = servers_col.find()
 
 
 
-##########################################
-###   CRUD ET AL.
-##########################################
+    #send the results to the home page:
+    template_args = {'network_devices': net_devices, 'servers': servers, 'errors': err_list}
+    return bottle.template('home.tpl', template_args)
 
-# Device view
 @bottle.route('/showDevice')
-def device_view():
+def show_device():
+    # get the url information (passed in as /showDevice?id=35jfjae3...&type=server)
+    # type will either be server or net (for now).
+
     device_id = bottle.request.query.id
-    result = lib.crud_ops.find_by_id(collection, device_id)
-    files = lib.crud_ops.get_attached_files(db.fs.files, device_id)
-    return bottle.template('devices/device_view.tpl', {'device':result, 'attached_files':files})
+    device_type = bottle.request.query.type
+
+    cursor = None
+    device = {}
+    attached_files = {}
+
+    if device_id: # was an id sent in?
+        # if so, search the database for the proper object
+
+        query = {"_id" : ObjectId(device_id)}
+
+        if device_type == "server":
+            cursor = db.servers.find(query)
+        elif device_type == "net":
+            cursor = db.net_devices.find(query)
+        else: # couldnt find device type
+            errors.append({'text': 'device type not recognized'})
+    else: # no id was sent in
+        errors.append({'text':'Device not found, No id sent in.'})
+
+    #after the search
+    if cursor: #if the search turn up something
+        for documents in cursor: # get the dictionaries out of the cursor
+            device = documents
+    #search the files db for any attached files
+        attached_files = db.fs.files.find({"device_id" : ObjectId(device_id)})
+
+    # return the search results
+        return bottle.template('device_view.tpl', {'device': device, 'attached_files': attached_files})
+    else: #the search was unsucessful
+        errors.append({'text': 'search turned up no results'})
+    bottle.redirect('/')
+
 
 @bottle.route('/addDevice')
 def add_device():
-    return bottle.template('devices/add_device.tpl')
+
+    return None
 
 
+@bottle.route('/addFile')
+def add_file():
+    device_id = bottle.request.query.id
+    device_name = bottle.request.query.name
+    device_type = bottle.request.query.type
+    device={'_id': device_id, 'name': device_name, 'type': device_type}
 
-# trying out different html code:
-@bottle.route('/test')
-def test_page():
-    return bottle.template('tryHTML/test.tpl')
+    return bottle.template('file_control/add_file_to_existing.tpl', {'device':device})
 
 
-
-@bottle.route('/upload', method='POST') #TODO: Change allowed extensions.
+@bottle.route('/upload', method='POST')
 def do_upload():
     data = bottle.request.files.data
     did = bottle.request.query.id
-    device_url = '/showDevice?id=' + str(did) +'#attached_files'
+    type = bottle.request.query.type
+    device_url = '/showDevice?id=' + str(did) + '&type=' + type+'#files'
     raw = data.file.read()  # This is dangerous for big files
     file_name = data.filename
     try:
@@ -154,9 +182,10 @@ def edit_page():
     # in comes device id, device type, and file id, and filename
     device_id = bottle.request.query.did
     fid = bottle.request.query.fid
+    device_type = bottle.request.query.type
     old_filename = bottle.request.query.ofn
     filedict = {'_id': ObjectId(fid), 'ofn': old_filename}
-    device={'_id': ObjectId(device_id)}
+    device={'_id': ObjectId(device_id), 'type': device_type}
 
     return bottle.template('file_control/edit_existing_filename.tpl', {'device':device, 'file':filedict})
 
@@ -165,10 +194,11 @@ def update_filename():
     # /updateFilename?fid=FILE_ID&did=DEVICE_ID&type=TYPE
     fid= ObjectId(bottle.request.query.fid)
     did= ObjectId(bottle.request.query.did)
-
+    dtype = bottle.request.query.type
     form_dict = bottle.request.forms
     new_name = str(form_dict['new_filename']) + str(form_dict['ext'])
-    device_url = '/showDevice?id=' + str(did) + '#attached_files'
+
+    device_url = '/showDevice?id=' + str(did) + '&type=' + dtype + '#files'
     db.fs.files.update({'_id': fid}, {'$set': {'filename': new_name}})
     return bottle.redirect(device_url)
 
@@ -181,7 +211,8 @@ def delete_file():
     # /removeFile?fid=FILE_ID&did=DEVICE_ID&type=TYPE
     fid= ObjectId(bottle.request.query.fid)
     did = ObjectId(bottle.request.query.did)
-    device_url = '/showDevice?id=' + str(did) + '#attached_files'
+    dtype = bottle.request.query.type
+    device_url = '/showDevice?id=' + str(did) + '&type=' + dtype + '#files'
     fs.delete(fid)
     return bottle.redirect(device_url)
 

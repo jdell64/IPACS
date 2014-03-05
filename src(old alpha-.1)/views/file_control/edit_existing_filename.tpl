@@ -12,7 +12,7 @@
 %current_filename= str(file['ofn'])[:(str(file['ofn']).index('.'))]
 
 
-<form action="/updateFilename?fid={{file['_id']}}&did={{device['_id']}}" method="post" enctype="multipart/form-data">
+<form action="/updateFilename?fid={{file['_id']}}&did={{device['_id']}}&type={{device['type']}}" method="post" enctype="multipart/form-data">
     Filename: <input type="text" name="new_filename" value="{{current_filename}}"  /> {{file_extension}}<br>
     <input type="hidden" name="ext" value="{{file_extension}}"/>
     <input type="submit"/>

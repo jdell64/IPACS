@@ -8,7 +8,7 @@
 </head>
 <body>
 <h2>Add file to {{device['name']}}'s entry:</h2>
-<form action="/upload?id={{device['_id']}}&type={{device['type']}}" method="post" enctype="multipart/form-data">
+<form action="/upload?id={{device['_id']}" method="post" enctype="multipart/form-data">
     <input type="text" name="device_id" value="{{device['_id']}}" disabled /> <br>
     <input type="file" name="data" /><br>
     <input type="submit"/>
