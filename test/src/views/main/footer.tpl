@@ -9,8 +9,23 @@
 
         <li><img src="footer\MongoDB_Logo.png"></li>
 
-            <li><img id="bizbiz_logo" src="footer\bizbiz.png"></li>
+       <!--     <li><img id="bizbiz_logo" src="footer\bizbiz.png"></li>-->
         </ul>
 
     </div>
+
+
+
 </footer>
+
+
+<script type="text/javascript" src="http://www.google.com/jsapi" ></script>
+<script type="text/javascript" > google.load("mootools", "1.2.1"); </script>
+<script type="text/javascript" src="MenuMatic_0.68.3.js" ></script>
+
+
+<script>
+window.addEvent('domready', function() {
+    var myMenu = new MenuMatic({ id:'nav' });
+});
+</script>

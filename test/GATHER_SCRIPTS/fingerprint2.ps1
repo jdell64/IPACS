@@ -85,6 +85,7 @@ $localList = '127.0.0.1', 'localhost', '.'
 Function generateJSON() {
 
     $output=@{}
+    $info=@()
     #Computer System Info
     if($computerSystemInfo){
         $domain = $computerSystemInfo.Domain
@@ -92,8 +93,8 @@ Function generateJSON() {
         $model = $computerSystemInfo.Model
         $computerName = $computerSystemInfo.Name
         #computer system output
-        $output += @{"device_name"=  $computerName; "type" = "server"}
-        $output += @{"system_computer_domain"= "$domain";"system_computer_name" = "$computerName"; "system_make"=$manufacturer; "system_model"=$model}
+        $output += @{"name"=  $computerName; "device_type" = "server"; "os" = "windows"}
+        $info += @{"system_info" =@(@{"computer_domain"= "$domain";"computer_name" = "$computerName"; "make"=$manufacturer; "model"=$model})}
     }
 
     #Motherboard Info
@@ -101,21 +102,25 @@ Function generateJSON() {
         $mbMake = $motherboardInfo.Manufacturer
         $mbSerial = $motherboardInfo.SerialNumber
         #motherboard output
-        $output += @{"mb_make" = "$mbMake"; "mb_serial" = "$mbSerial"}
+        $info +=@{"mb_info" = @(@{"make" = "$mbMake"; "serial" = "$mbSerial"})}
     }
 
 
     #CPU Info
     if($cpuInfo){
-        if ($cpuInfo -is [system.array]){
-            $cpuInfo = $cpuInfo[0]
+        $tempCPUList=@()
+        $cpuNum=1
+        foreach($cpu in $cpuInfo){
+            $cpuManufacturer = $cpu.Manufacturer    
+            $n = ([float]$cpu.MaxClockSpeed)/1000
+            $n = ("{0:N1}" -f $n)
+            $cpuSpeed =  "$n GHz"
+            $cpuName = $cpu.Name
+            $tempCPUList += @{"number"= $cpuNum;"name" = "$cpuName"; "make" = "$cpuManufacturer"; "speed" = "$cpuSpeed"}
+            $cpuNum++
         }
-        $cpuManufacturer = $cpuInfo.Manufacturer    
-        $n = ([float]$cpuInfo.MaxClockSpeed)/1000
-        $n = ("{0:N1}" -f $n)
-        $cpuSpeed =  "$n GHz"
-        $cpuName = $cpuInfo.Name
-        $output += @{"cpu_name" = "$cpuName"; "cpu_make" = "$cpuManufacturer"; "cpu_speed" = "$cpuSpeed"}
+        $info +=@{"cpu_info" = $tempCPUList}
+
     }
 
     if($winInfo){
@@ -125,64 +130,106 @@ Function generateJSON() {
         $osMajorVersion = $winInfo.Version.Substring(0,3)
         $winVersionName =""
         switch ($osProdType) {
+            "Server" {$winVersionName = $winClientDictionary.get_Item($osMajorVersion)}
             "Unknown" {$winVersionName = $winClientDictionary.get_Item($osMajorVersion)}
             "Client" {$winVersionName = $winClientDictionary.get_Item($osMajorVersion)}
             default {$winVersionName = $winServerDictionary.get_Item($osMajorVersion)}
         }
         $osVersionNumber = $winInfo.Version
         #OS output
-        $output+=  @{"os_name" = "$winVersionName"; "os_Bit"= "$osBit"; "os_version_number"= "$osVersionNumber"; "os_type" = "$osProdType"}
+       $info += @{"os_info" = @( @{"name" = "$winVersionName"; "bit"= "$osBit"; "version_number"= "$osVersionNumber"; "type" = "$osProdType"})
     }
-
+    }
     if($memoryInfo){
         #physical memory info
-
-        $memorySpeed = $memoryInfo.Speed
-        $memorySize = $memoryInfo.Capacity
-        if ($memorySize) {
-            $temp = 0
-            foreach ($mem in $memorySize){
-                $temp +=  [float]$mem
-            }
-            $memorySize = $temp
+        $tempMEMList =@()
+        $memNum = 1
+        foreach ($mem in $memoryInfo){
             
-            $memorySize /=1073741824
+            $memorySpeed = $mem.Speed
+            $memorySize = $mem.Capacity
+            $memorySize /= 1073741824
             $memorySize = "$memorySize GB"
+            if ($memorySpeed){$memorySpeed = "$memorySpeed Hz"}
+            $tempMEMList+= @{"number" = $memNum; "size" = $memorySize; "speed" = $memorySpeed}
+
+            $memNum++
             }
-            
-        if ($memorySpeed){$memorySpeed = "$memorySpeed Hz"}
-        
+
         #memory Output
-        $output += @{"mem_size" = $memorySize; "mem_speed" = $memorySpeed}
+        $info += @{"mem_info" = $tempMEMList}
+
     }
 
     #Hard drive Info
     #drive Output
 
     if($drivesInfo){
-        $drivesOutput = @{}
+  
+        $tempDRIVEList =@()
         $currentDrive=1
         foreach ($drive in $drivesInfo){
             $currentDriveHash = @{}
-            $label = "drive$currentDrive"+"_"
 
-            $currentDriveHash += @{("$label"+"device_id") = $drive.DeviceID}
-            $currentDriveHash += @{("$label"+"name") = $drive.VolumeName}
-            $currentDriveHash += @{("$label"+"type") = ($driveTypeDictionary[($drive.DriveType)])}
-            $currentDriveHash += @{("$label"+"free") = $drive.FreeSpace}
-            $currentDriveHash += @{("$label"+"used") = ($drive.size - $drive.FreeSpace)}
-            $currentDriveHash += @{("$label"+"max_size") = $drive.Size}
-   
-            $output += $currentDriveHash
-   
+            $free = $drive.FreeSpace
+            $maxSize = $drive.Size 
+            $used = ($maxSize - $free) 
+            if($maxSize){
+                $usedp = $used / $maxSize
+                $usedp = "{0:N0}" -f $usedp
+                $usedp = "$usedp %"
+            }
+
+            $tempArray =@($maxSize, $free, $used)
+
+            for($i=0; $i -lt $tempArray.Length; $i++){
+                if($tempArray[$i]){
+                    $tempstr = ""
+                    $tempArray[$i] = "{0:N2}" -f ($tempArray[$i]/1073741824)
+                    $tempstr = $tempArray[$i]
+                    $tempstr = "$tempstr GB"
+                    $tempArray[$i] = $tempstr
+                } else {
+                    $tempArray[$i] = $NULL
+                }
+            }
+
+            $maxSize = $tempArray[0]
+            $free = $tempArray[1]
+            $tempstr = $tempArray[2]
+            if ($tempstr){
+                $tempstr = "$tempstr ($usedp)"
+            }
+            $used = $tempstr 
+
+
+
+            $currentDriveHash += @{"device_id" = $drive.DeviceID}
+            $currentDriveHash += @{"name" = $drive.VolumeName}
+            $currentDriveHash += @{"type" = ($driveTypeDictionary[($drive.DriveType)])}
+            $currentDriveHash += @{"free" = $free}
+            $currentDriveHash += @{"used" = $used}
+            $currentDriveHash += @{"max_size" = $maxSize}
+            $currentDriveHash += @{"drive_num" = $currentDrive}
             $currentDrive++
+            $tempDRIVEList += $currentDriveHash
+            }
 
-        }
+        #memory Output
+        $info += @{"hd_info" = $tempDRIVEList}
+
     }
+
     if($networkInfo){
+        
+        $tempNICList =@()
         $currentNetDevice = 1
         foreach ($netDevice in $networkInfo){
-            $currentIP = ($netDevice.IPAddress | Where-Object {$_ -like "*.*.*.*"})
+            $currentNetHash = @{}
+            $currentNetHash += @{"name" = $netDevice.Description}
+            $currentNetHash += @{"nic_num" = $currentNetDevice}
+            $currentNetHash += @{"dhcp"=  $netDevice.DHCPEnabled}
+            $currentNetHash += @{"ip" =  $netDevice.IPAddress | Where-Object {$_ -like "*.*.*.*"}}
             $currentgw =  $netDevice.defaultIPGateway
             if($currentgw){
                 $currentgw= $currentgw[0]
@@ -190,17 +237,19 @@ Function generateJSON() {
             } else {
                 $currentgw = "N/A"
             }
-    
-            $label = "eth$currentNetDevice"+"_"
-            $currentNetHash = @{}
-            $currentNetHash += @{("$label"+"name")= $netDevice.Description}
-            $currentNetHash += @{("$label"+"dhcp")=  $netDevice.DHCPEnabled}
-            $currentNetHash += @{("$label"+"ip")=  $currentIP}
-            $currentNetHash += @{("$label"+"gw")=  $currentgw}
-            $output += $currentNetHash
+            $currentNetHash += @{"gw"=  $currentgw}
+            $tempNICList += $currentNetHash
             $currentNetDevice++
         }
+
+        $info += @{"net_info" = $tempNICList}
+
     }
+
+
+    $output += @{"info" = $info}
+
+    
 
 
     <#####################################################################
@@ -208,13 +257,9 @@ Function generateJSON() {
     #####################################################################>
     
     if($output.Count -ne 0){
-        
-       
-
-        $jsonOutput = $output | ConvertTo-Json
+        $jsonOutput =  ConvertTo-Json @($output) -Depth 5
         Set-Content -Path "./$Computername.json" -Encoding UTF8 -Value $jsonOutput
     
-
     <#####################################################################
                 import into mongodb
     #####################################################################>
@@ -228,7 +273,8 @@ Function generateJSON() {
     }    
     
 
-   $computerSystemInfo = $null 
+####RESET VARS####
+    $computerSystemInfo = $null 
     $motherboardInfo = $null
     $cpuInfo = $null 
     $winInfo =$null
@@ -237,8 +283,8 @@ Function generateJSON() {
     $networkInfo =$null
     $computername = $null
 
-
- }
+    }
+ 
 
 
 <#####################################################################
@@ -277,7 +323,7 @@ if (!$isList){
     foreach ($target in $fileContent) {
         $canConnect = Test-Connection -ComputerName $target -Quiet
         if($canConnect){
-            Write-Host "Able to ping to $host."
+            Write-Host "Able to ping to $target."
             $ErrorActionPreference = "silentlycontinue"
             try{
                 if ($localList -contains $target){
@@ -289,25 +335,25 @@ if (!$isList){
                     $drivesInfo = gwmi Win32_LogicalDisk
                     $networkInfo = (gwmi win32_networkadapterconfiguration | where IPAddress -NE $NULL)    
                 } else {
-                    Write-Host -nonewline "getting SYSTEM info..."
+                    Write-Host -nonewline "`tgetting SYSTEM info..."
                     $computerSystemInfo = gwmi Win32_computerSystem -ComputerName $target -Credential $cred
                     Write-Host  "done."
-                    Write-Host -nonewline "getting MOTHERBOARD info..."
+                    Write-Host -nonewline "`tgetting MOTHERBOARD info..."
                     $motherboardInfo = gwmi Win32_baseboard -ComputerName $target -Credential $cred
                     Write-Host  "done."
-                    Write-Host -nonewline "getting PROCESSOR info..."
+                    Write-Host -nonewline "`tgetting PROCESSOR info..."
                     $cpuInfo = gwmi Win32_processor -ComputerName $target -Credential $cred
                     Write-Host  "done."
-                    Write-Host -nonewline "getting OS info..."
+                    Write-Host -nonewline "`tgetting OS info..."
                     $winInfo = gwmi Win32_operatingSystem -ComputerName $target -Credential $cred
                     Write-Host  "done."
-                    Write-Host -nonewline "getting MEMORY info..."
+                    Write-Host -nonewline "`tgetting MEMORY info..."
                     $memoryInfo = gwmi Win32_PhysicalMemory -ComputerName $target -Credential $cred
                     Write-Host  "done."
-                    Write-Host -nonewline "getting DISK info..."
+                    Write-Host -nonewline "`tgetting DISK info..."
                     $drivesInfo = gwmi Win32_LogicalDisk -ComputerName $target -Credential $cred
                     Write-Host  "done."
-                    Write-Host -nonewline "getting NETWORK info..."
+                    Write-Host -nonewline "`tgetting NETWORK info..."
                     $networkInfo = (gwmi win32_networkadapterconfiguration -ComputerName $target -Credential $cred | where IPAddress -NE $NULL) 
                     Write-Host  "done."
                 }

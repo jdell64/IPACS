@@ -87,10 +87,16 @@ def unpack_device(device):
                 unpack_device(value)
                 unpack_device.output += "</div>"
 
-        elif isinstance(device, unicode):
-             unpack_device.output += "<div class=\"device_info_item\">"+str(device)+"</div>"
         else:
-            print "unknown type"
+            if (device is None):
+                unpack_device.output += "<div class=\"DELETE_ROW\">"+str(device)+"</div>"
+            elif(str(device) ==""):
+                unpack_device.output += "<div class=\"DELETE_ROW\">"+str(device)+"</div>"
+            else:
+                device = str(device)
+                unpack_device.output += "<div class=\"device_info_item\">"+device+"</div>"
+        # else:
+        #      print device , type(device)
 
 
     return "<div class=\"info_wrapper\">" + str(unpack_device.output) + "</div>"

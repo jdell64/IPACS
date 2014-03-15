@@ -13,4 +13,7 @@ $('#attached_files').each(function(){
     $this.html(t.replace('&lt','<').replace('&gt', '>'));
 
 });$
-
+$('.DELETE_ROW').each(function(){
+    var $this = $(this);
+    $this.parent().remove();
+});$

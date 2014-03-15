@@ -20,6 +20,7 @@ a:link {
 /* selected link */
  * {
     margin:0;
+
 }
 /*
 div {
@@ -74,6 +75,9 @@ body p {
     height:0;
     margin: 0 0 0 -2000px;
 }
+
+
+/*
 #nav_bar {
 }
 #nav {
@@ -101,6 +105,9 @@ body p {
     color: #c00;
     background-color: #fff;
 }
+*/
+
+
 #content {
     margin:10px 100px 0 100px;
 }

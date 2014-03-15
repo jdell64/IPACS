@@ -48,6 +48,8 @@ collection = db.test
 #get gridfs for the dbs
 fs = gridfs.GridFS(db)
 
+unprocessed_fs = gridfs.GridFS(db, "unprocessed")
+
 
 
 
@@ -117,6 +119,20 @@ def add_device_post():
     #TODO: verify data before taking into db
     collection.insert(dict)
     return bottle.template('devices/add_device.tpl') #TODO return success ro fail page
+
+
+
+
+@bottle.route('/ingest', method='POST') #TODO: this is dumb, had to because i needed this function quick
+def ingest():
+    upload = bottle.request.files.get('data')
+    raw = upload.file.read()
+    uploaded_dict = ast.literal_eval(raw)
+    # print uploaded_dict
+    new_id = collection.insert(uploaded_dict)
+    # print new_id
+    device_url = '/showDevice?id=' + str(new_id)
+    return bottle.redirect(device_url)
 
 
 
@@ -198,21 +214,12 @@ def delete_file():
 def delete_device():
     # Need to delete any files related to this device, then delete the device
     did = ObjectId(bottle.request.query.did)
-    dtype = bottle.request.query.type
+
     results = db.fs.files.find({'device_id': did})
     for file in results:
         fs.delete(file['_id']) # delete all files associated with this entry
-    if dtype == 'net':
-        col = db.net_devices
-    elif dtype == 'server':
-        col = db.servers
-    else:
-        return bottle.redirect('/')
-
-    col.remove(did)
-
-
-    return bottle.redirect('/')
+    collection.remove(did)
+    return bottle.redirect('/viewAll');
 
 
 

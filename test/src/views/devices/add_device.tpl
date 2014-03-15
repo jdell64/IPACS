@@ -14,13 +14,30 @@
 
 
 <section>
-    UPLOAD .JSON or Add Manually:
+    <h2>UPLOAD .JSON:</h2>
+    <form action="/ingest" enctype="multipart/form-data" method="post">
+        <p>This form takes .json and loads it into the db for viewing. The json file MUST look like this:
+        <br><br>
+            {"name" : "", "device_type" : "", "os" : "", "info": [{ "key" : [{"key" : "value"}, {"key" : "value"}]}, { "key" : [{"key" : "value"}, {"key" : "value"}]} ] }
+            <br><br>eg:<br>
+            {"name" : "complex_server","device_type" : "server","os" : "linux","info" : [{"net_info" : [{"ip" : "192.168.0.5","name" : "eth0"},{"ip" : "192.168.0.28","name" : "eth1"}]},{"os_info" : [{"name" : "RHEL 5.2"}]},{"drive_info" : [{}]}]}
+<br>
+        </p>
+        <p><h3>Rules:</h3><br>
+        1) name, device_type, os and info are required fields<br>
+        2) type must be one of the following: "server" or "net"
+        3) if it is a server, the os must be "windows" or "linux"
+        4) info is an array of dictionaries. eg. [{"key":"value"}, {"key": "value"}]
+        5) each item in info is an array of dictionaries.
 
-
+        </p>
+    <label for="json_input">Upload .JSON file:<br></label><input id="json_input" name="data" type="file"><br>
+    <input type="submit">
+    </form>
 </section>
-
+<br><br><br><br>
 <form action="" method="post" name="addDevForm">
-
+    <h2>EXPERIMENTAL</h2>
     NEED BACK BUTTONS AND START OVER BUTTON
     <div id="test"></div>
     <div id="top_three">name:

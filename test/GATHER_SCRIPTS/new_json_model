@@ -94,3 +94,286 @@
                 }
         ]
 }
+
+{
+        "_id" : ObjectId("530ba863c8033c7e55f226b4"),
+        "name" : "complex_server",
+        "device_type" : "server",
+        "os" : "linux",
+        "info" : [
+                {
+                        "net_info" : [
+                                {
+                                        "ip" : "192.168.0.5",
+                                        "name" : "eth0"
+                                },
+                                {
+                                        "ip" : "192.168.0.28",
+                                        "name" : "eth1"
+                                }
+                        ]
+                },
+                {
+                        "os_info" : [
+                                {
+                                        "name" : "RHEL 5.2"
+                                }
+                        ]
+                },
+                {
+                        "drive_info" : [
+                                {
+
+                                }
+                        ]
+                }
+        ]
+}
+{
+        "_id" : ObjectId("530ba87bc8033c7e55f226b5"),
+        "name" : "complex_server1",
+        "device_type" : "server",
+        "os" : "windows",
+        "info" : [
+                {
+                        "net_info" : [
+                                {
+                                        "ip" : "192.168.0.5",
+                                        "name" : "eth0"
+                                },
+                                {
+                                        "ip" : "192.168.0.28",
+                                        "name" : "eth1"
+                                }
+                        ]
+                },
+                {
+                        "os_info" : [
+                                {
+                                        "name" : "RHEL 5.2"
+                                }
+                        ]
+                },
+                {
+                        "drive_info" : [
+                                {
+
+                                }
+                        ]
+                }
+        ]
+}
+{
+        "_id" : ObjectId("530ba881c8033c7e55f226b6"),
+        "name" : "complex_server1",
+        "device_type" : "server",
+        "os" : "windows",
+        "info" : [
+                {
+                        "net_info" : [
+                                {
+                                        "ip" : "192.168.0.5",
+                                        "name" : "eth0"
+                                },
+                                {
+                                        "ip" : "192.168.0.28",
+                                        "name" : "eth1"
+                                }
+                        ]
+                },
+                {
+                        "os_info" : [
+                                {
+                                        "name" : "RHEL 5.2"
+                                }
+                        ]
+                },
+                {
+                        "drive_info" : [
+                                {
+
+                                }
+                        ]
+                }
+        ]
+}
+{
+        "_id" : ObjectId("530ba882c8033c7e55f226b7"),
+        "name" : "complex_server1",
+        "device_type" : "server",
+        "os" : "windows",
+        "info" : [
+                {
+                        "net_info" : [
+                                {
+                                        "ip" : "192.168.0.5",
+                                        "name" : "eth0"
+                                },
+                                {
+                                        "ip" : "192.168.0.28",
+                                        "name" : "eth1"
+                                }
+                        ]
+                },
+                {
+                        "os_info" : [
+                                {
+                                        "name" : "RHEL 5.2"
+                                }
+                        ]
+                },
+                {
+                        "drive_info" : [
+                                {
+
+                                }
+                        ]
+                }
+        ]
+}
+{
+        "_id" : ObjectId("530ba88ec8033c7e55f226b8"),
+        "name" : "router",
+        "device_type" : "net",
+        "os" : "CISCO",
+        "info" : [
+                {
+                        "net_info" : [
+                                {
+                                        "ip" : "192.168.0.5",
+                                        "name" : "eth0"
+                                },
+                                {
+                                        "ip" : "192.168.0.28",
+                                        "name" : "eth1"
+                                }
+                        ]
+                },
+                {
+                        "OS_info" : [
+                                {
+                                        "name" : "CISCO"
+                                }
+                        ]
+                },
+                {
+                        "something_info" : [
+                                {
+
+                                }
+                        ]
+                }
+        ]
+}
+{
+        "_id" : ObjectId("530ba88fc8033c7e55f226b9"),
+        "name" : "router",
+        "device_type" : "net",
+        "os" : "CISCO",
+        "info" : [
+                {
+                        "net_info" : [
+                                {
+                                        "ip" : "192.168.0.5",
+                                        "name" : "eth0"
+                                },
+                                {
+                                        "ip" : "192.168.0.28",
+                                        "name" : "eth1"
+                                }
+                        ]
+                },
+                {
+                        "OS_info" : [
+                                {
+                                        "name" : "CISCO"
+                                }
+                        ]
+                },
+                {
+                        "something_info" : [
+                                {
+
+                                }
+                        ]
+                }
+        ]
+}
+{
+        "_id" : ObjectId("530ba88fc8033c7e55f226ba"),
+        "name" : "router",
+        "device_type" : "net",
+        "os" : "CISCO",
+        "info" : [
+                {
+                        "net_info" : [
+                                {
+                                        "ip" : "192.168.0.5",
+                                        "name" : "eth0"
+                                },
+                                {
+                                        "ip" : "192.168.0.28",
+                                        "name" : "eth1"
+                                }
+                        ]
+                },
+                {
+                        "OS_info" : [
+                                {
+                                        "name" : "CISCO"
+                                }
+                        ]
+                },
+                {
+                        "something_info" : [
+                                {
+
+                                }
+                        ]
+                }
+        ]
+}
+{
+        "_id" : ObjectId("531783522da57a76f531fa88"),
+        "info" : [
+                {
+                        "net_info" : [
+                                {
+                                        "ip" : "192.168.0.12",
+                                        "name" : "eth0"
+                                }
+                        ],
+                        "os_info" : [
+                                {
+                                        "type" : "client",
+                                        "build" : "1.9.23"
+                                }
+                        ]
+                }
+        ],
+        "os" : "",
+        "name" : "",
+        "device_type" : ""
+}
+{
+        "_id" : ObjectId("531783732da57a76f531fa89"),
+        "info" : [
+                {
+                        "net_info" : [
+                                {
+                                        "ip" : "192.168.0.12",
+                                        "name" : "eth0"
+                                }
+                        ],
+                        "os_info" : [
+                                {
+                                        "type" : "client",
+                                        "build" : "1.9.23"
+                                }
+                        ]
+                }
+        ],
+        "os" : "windows",
+        "name" : "idea",
+        "device_type" : "server"
+}

@@ -27,7 +27,7 @@
                 <h3>Windows Servers</h3>
             </div>
             <div class="head_actions">
-                &nbsp;<a href=""><img width="50" height="50" src="add.png"/></a>
+                &nbsp;<a href="/addDevice"><img width="50" height="50" src="add.png"/></a>
 
                 <div class="clear_both"></div>
             </div>
@@ -44,7 +44,7 @@
                         </div>
                         <div class="action_panel">
                             &nbsp;<a href=""><img width="25" height="25" src="edit.png"/></a>
-                            &nbsp;<a href=""><img width="25" height="25" src="delete.png"/></a>
+                            &nbsp;<a href="/removeDevice?did={{server['_id']}}"><img width="25" height="25" src="delete.png"/></a>
 
                         </div>
 
@@ -68,7 +68,7 @@
                 <h3>Linux Servers</h3>
             </div>
             <div class="head_actions">
-                &nbsp;<a href=""><img width="50" height="50" src="add.png"/></a>
+                &nbsp;<a href="/addDevice"><img width="50" height="50" src="add.png"/></a>
 
                 <div class="clear_both"></div>
             </div>
@@ -85,7 +85,7 @@
                         </div>
                         <div class="action_panel">
                             &nbsp;<a href=""><img width="25" height="25" src="edit.png"/></a>
-                            &nbsp;<a href=""><img width="25" height="25" src="delete.png"/></a>
+                            &nbsp;<a href="/removeDevice?did={{server['_id']}}"><img width="25" height="25" src="delete.png"/></a>
 
                         </div>
 
@@ -112,7 +112,7 @@
                 <h3>Network Devices</h3>
             </div>
             <div class="head_actions">
-                &nbsp;<a href=""><img width="50" height="50" src="add.png"/></a>
+                &nbsp;<a href="/addDevice"><img width="50" height="50" src="add.png"/></a>
 
                 <div class="clear_both"></div>
             </div>
@@ -129,7 +129,7 @@
                         </div>
                         <div class="action_panel">
                             &nbsp;<a href=""><img width="25" height="25" src="edit.png"/></a>
-                            &nbsp;<a href=""><img width="25" height="25" src="delete.png"/></a>
+                            &nbsp;<a href="/removeDevice?did={{device['_id']}}"><img width="25" height="25" src="delete.png"/></a>
 
                         </div>
 
