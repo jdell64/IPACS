@@ -164,7 +164,6 @@
         ]
 }
 {
-        "_id" : ObjectId("530ba881c8033c7e55f226b6"),
         "name" : "complex_server1",
         "device_type" : "server",
         "os" : "windows",
@@ -198,10 +197,10 @@
         ]
 }
 {
-        "_id" : ObjectId("530ba882c8033c7e55f226b7"),
+
         "name" : "complex_server1",
         "device_type" : "server",
-        "os" : "windows",
+        "os" : "linux",
         "info" : [
                 {
                         "net_info" : [
@@ -232,7 +231,7 @@
         ]
 }
 {
-        "_id" : ObjectId("530ba88ec8033c7e55f226b8"),
+
         "name" : "router",
         "device_type" : "net",
         "os" : "CISCO",
@@ -266,9 +265,8 @@
         ]
 }
 {
-        "_id" : ObjectId("530ba88fc8033c7e55f226b9"),
         "name" : "router",
-        "device_type" : "net",
+        "device_type" : "netwrk",
         "os" : "CISCO",
         "info" : [
                 {

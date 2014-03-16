@@ -31,28 +31,42 @@ def get_header(label):
         header=label
     return header
 
-#
-# def unpack_device(device):
-#     if "output" not in unpack_device.__dict__: unpack_device.output = ""
-#     if device=="CLEAR":
-#         default_unpack.output = ""
-#     #passed in a list
-#     for doc in device:
-#         for k, v in doc.items():
-#             unpack_device.output += "<div id=\"device_info_head\">" + str(k) + "</div>"
-#             if isinstance(v, list):
-#                 for items in v:
-#                     unpack_device.output += "<div id=\"device_sub_item\">"
-#                     unpack_device(items)
-#                     unpack_device.output += "</div>"
-#             elif isinstance(v, dict):
-#                 for keys, values in v:
-#
-#             elif isinstance(v, unicode):
-#                 unpack_device.output +=  str(v)
-#
-#
-#     return "<div class=\"info_wrapper\">" + str(unpack_device.output) + "</div>"
+def start_view(header):
+    output ='<div class="list_container">'
+    output +='<div class="head_wrapper">'
+    output +='<div class="head_title">'
+    output += "<h3>"+header+"</h3>"
+    output += '</div><div class="head_actions">'
+    output +='&nbsp;<a href="/addDevice"><img width="50" height="50" src="add.png"/></a>'
+    output +='<div class="clear_both"></div></div><div class="clear_both"></div>'
+    output +='</div><div class="clear_both"></div><div class="body_wrapper">'
+    output +='<ul><div class="device_wrapper">'
+    return output
+
+def view_all_overview(dict_in):
+    output ='<li class="device">'
+    output +='<div class="device_link">'
+    output +='<a href="/showDevice?id='+str(dict_in['_id'])+'">'+dict_in['name']+'&nbsp;</a>'
+    output +='</div><div class="action_panel">&nbsp;<a href=""><img width="25" height="25" src="edit.png"/></a>'
+    output +='&nbsp;<a href="/removeDevice?did='+str(dict_in['_id'])+'"><img width="25" height="25" src="delete.png"/></a>'
+    output +='</div><div class="clear_both"></div></li>'
+    return output
+
+def end_view():
+    output ='</div></ul></div><div class="clear_both"></div></div>'
+    return output
+
+def search_format(dict):
+    output ='<li class="device">'
+    output +='<div class="device_link">'
+    output +='<a href="/showDevice?id='+str(dict['_id'])+'">'+dict['name']+'&nbsp;</a>'
+    output +='</div><div class="action_panel">&nbsp;<a href=""><img width="25" height="25" src="edit.png"/></a>'
+    output +='&nbsp;<a href="/removeDevice?did='+str(dict['_id'])+'"><img width="25" height="25" src="delete.png"/></a>'
+    output +='</div><div class="clear_both"></div></li>'
+
+    return output
+
+
 
 def unpack_device(device):
     if "output" not in unpack_device.__dict__: unpack_device.output = ""

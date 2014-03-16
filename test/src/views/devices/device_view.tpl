@@ -2,14 +2,7 @@
 
 <!-- pass in a document-->
 <html>
-<head>
-    <title>IPAC</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <script src="jquery-2.1.0.js"></script>
 
-
-</head>
-<body>
 
 %include('main/header.tpl')
 
@@ -51,7 +44,7 @@
 
             <div id="change_tags">
                 %info_html = lib.format_functions.unpack_device(device['info'])
-                {{info_html}}
+                {{!info_html}}
                 %lib.format_functions.unpack_device("CLEAR")
 
 
@@ -69,10 +62,8 @@
 
             <div id="attached_files">
                 %if len(attached_files) > 0:
-
-
                 %file_html = lib.format_functions.unpack_files(attached_files)
-                {{file_html}}
+                {{!file_html}}
                 %lib.format_functions.unpack_files("CLEAR")
                 %else:
                 <p>No files currently attached.</p>

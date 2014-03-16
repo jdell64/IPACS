@@ -39,9 +39,16 @@ __author__ = 'Jeff Tindell'
 # along with this program.  If not, see <http://www.gnu.org/licenses/>
 
 
+#--setParameter textSearchEnabled=true
+# db.collection.ensureIndex(
+#                            { "$**": "text" },
+#                            { name: "TextIndex" }
+#                          )
+# http://docs.mongodb.org/manual/tutorial/create-text-index-on-multiple-fields/
+
 
 #establish a connection to the db:
-connection = pymongo.MongoClient("mongodb://localhost")
+connection = pymongo.MongoClient("mongodb://localhost") #TODO: TRY CATCH?
 db = connection.ipac
 # get collections of my network devices and servers in the inventory
 collection = db.test
@@ -119,6 +126,14 @@ def add_device_post():
     #TODO: verify data before taking into db
     collection.insert(dict)
     return bottle.template('devices/add_device.tpl') #TODO return success ro fail page
+
+@bottle.route('/searchResult')
+def result_page():
+    search_text = bottle.request.query.q
+    results = lib.crud_ops.search(db, collection, search_text)
+    formated_results = {"count":(len(results)), "results":results, 'search':search_text}
+
+    return bottle.template('devices/results.tpl', {'results':formated_results})
 
 
 

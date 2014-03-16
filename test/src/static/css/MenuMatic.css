@@ -10,7 +10,7 @@
     text-decoration:none;
     display:block;
     padding:10px 20px;
-    background-color:#fff;
+    background-color:#f2f2f2;
     -moz-border-radius: 7px;
     -webkit-border-radius: 7px;
 }
@@ -43,11 +43,11 @@
 }
 /* Parent Main Menu Links ---[javascript users only]*/
  .mainMenuParentBtn {
-    background: url(../img/arrow_down.gif) right center no-repeat;
+    //background: url(../arrow_down.png) right center no-repeat;
 }
 /* Parent Main Menu Links on hover or focus ---[javascript users only]*/
  .mainMenuParentBtnFocused {
-    background: url(../img/arrow_down_over.gif) right center no-repeat;
+    //background: url(../arrow_down_over.gif) right center no-repeat;
 }
 /* ----[ OLs ULs, LIs, and DIVs ]----*/
 
@@ -118,8 +118,6 @@
     background-color: #f2f2f2;
     border-bottom: 1px solid #ccc;
     border-top: 1px solid #ccc;
-
-
 }
 #subMenusContainer {
     display:block;

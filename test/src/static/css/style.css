@@ -298,3 +298,9 @@ footer li {
     float:left;
     width:160px;
 }
+
+#search_bar{
+    padding-top: 5px;
+    float:right;
+
+}

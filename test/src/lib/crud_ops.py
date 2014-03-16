@@ -1,3 +1,4 @@
+import ast
 from bson import ObjectId
 import pymongo
 
@@ -11,9 +12,12 @@ def find_all(col):
     win_servers = col.find(query)
     query = {"device_type":"server", "os": "linux"}
     lin_servers = col.find(query)
+    query= {"$or":[{"$and":[{"device_type":{"$ne":"server"}}, {"device_type":{"$ne":"net"}}]}, {"device_type":"server", "$and":[{"os":{"$ne":"windows"}}, {"os":{"$ne":"linux"}}]}]}
+    other_dev = col.find(query)
     all_devices['net'] = net_devices
     all_devices['win'] = win_servers
     all_devices['lin']= lin_servers
+    all_devices['oth'] = other_dev
     return all_devices
 
 
@@ -23,8 +27,38 @@ def find_by_id(col, obj_id):
     result = col.find_one(query)
     return result
 
-def search(col, obj_key, obj_value): #not sure best implementation of this
-    return None
+def search(db, col, search_text):
+    if(not search_text ):
+        return "";
+    else:
+        search_text = str(search_text)
+    query = col.find({})
+    results = []
+    for result in query:
+        if(str(result.values()).find(search_text)>=0):
+            results.append(result)
+
+
+        # if(result.find(search_text) >=0):
+        #     result = str(result)
+        #     print "FOUND", result
+        #
+        #     dict = ast.literal_eval(result)
+        #     results.append(dict)
+        #     break
+            # if (str(v).find(search_text) >= 0):
+            #     results.append(result)
+            #     print "FOUND", str(v)
+            #     break
+
+
+    # query = db.command("text", str(col.name), search="\\a\\'")
+    # print query
+    # results =[]
+    # for result in query['results']:
+    #     results.append(result['obj'])
+
+    return results
 
 
 def get_attached_files(col, obj_id):
