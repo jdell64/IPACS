@@ -135,7 +135,11 @@ def result_page():
 
     return bottle.template('devices/results.tpl', {'results':formated_results})
 
-
+@bottle.route('/edit')
+def edit_device():
+    device_id = bottle.request.query.id
+    result = lib.crud_ops.find_by_id(collection, device_id)
+    return bottle.template('devices\edit_device', {'device':result})
 
 
 @bottle.route('/ingest', method='POST') #TODO: this is dumb, had to because i needed this function quick

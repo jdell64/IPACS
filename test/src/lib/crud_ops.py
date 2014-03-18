@@ -37,27 +37,6 @@ def search(db, col, search_text):
     for result in query:
         if(str(result.values()).find(search_text)>=0):
             results.append(result)
-
-
-        # if(result.find(search_text) >=0):
-        #     result = str(result)
-        #     print "FOUND", result
-        #
-        #     dict = ast.literal_eval(result)
-        #     results.append(dict)
-        #     break
-            # if (str(v).find(search_text) >= 0):
-            #     results.append(result)
-            #     print "FOUND", str(v)
-            #     break
-
-
-    # query = db.command("text", str(col.name), search="\\a\\'")
-    # print query
-    # results =[]
-    # for result in query['results']:
-    #     results.append(result['obj'])
-
     return results
 
 

@@ -47,7 +47,7 @@ def view_all_overview(dict_in):
     output ='<li class="device">'
     output +='<div class="device_link">'
     output +='<a href="/showDevice?id='+str(dict_in['_id'])+'">'+dict_in['name']+'&nbsp;</a>'
-    output +='</div><div class="action_panel">&nbsp;<a href=""><img width="25" height="25" src="edit.png"/></a>'
+    output +='</div><div class="action_panel">&nbsp;<a href="/edit?id='+str(dict_in['_id'])+'"><img width="25" height="25" src="edit.png"/></a>'
     output +='&nbsp;<a href="/removeDevice?did='+str(dict_in['_id'])+'"><img width="25" height="25" src="delete.png"/></a>'
     output +='</div><div class="clear_both"></div></li>'
     return output
@@ -56,12 +56,12 @@ def end_view():
     output ='</div></ul></div><div class="clear_both"></div></div>'
     return output
 
-def search_format(dict):
+def search_format(dict_in):
     output ='<li class="device">'
     output +='<div class="device_link">'
-    output +='<a href="/showDevice?id='+str(dict['_id'])+'">'+dict['name']+'&nbsp;</a>'
-    output +='</div><div class="action_panel">&nbsp;<a href=""><img width="25" height="25" src="edit.png"/></a>'
-    output +='&nbsp;<a href="/removeDevice?did='+str(dict['_id'])+'"><img width="25" height="25" src="delete.png"/></a>'
+    output +='<a href="/showDevice?id='+str(dict_in['_id'])+'">'+dict_in['name']+'&nbsp;</a>'
+    output +='</div><div class="action_panel">&nbsp;<a href="/edit?id='+str(dict_in['_id'])+'<img width="25" height="25" src="edit.png"/></a>'
+    output +='&nbsp;<a href="/removeDevice?did='+str(dict_in['_id'])+'"><img width="25" height="25" src="delete.png"/></a>'
     output +='</div><div class="clear_both"></div></li>'
 
     return output
